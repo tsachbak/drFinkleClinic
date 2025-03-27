@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>קליניקת ד"ר פינקלשטיין</title>
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Aguafina+Script&family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              aguafina: ['"Aguafina Script"', "cursive"],
+              libre: ['"Libre-Baskerville"', "serif"],
+            },
+          },
+        },
+      };
+    </script>
+
+    <!-- Optional: your own styles if needed -->
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body class="bg-gray-100 text-gray-800">
+    <!-- 🔝 Navigation Bar -->
+    <header
+      dir="ltr"
+      class="bg-white shadow-md py-4 px-6 grid grid-cols-3 items-center"
+    >
+      <!-- Logo -->
+      <div class="flex justify-start items-center">
+        <img
+          src="pictures/logo.png"
+          alt="לוגו הקליניקה"
+          class="h-[170px] w-[170px] rounded-full"
+        />
+      </div>
+      <!-- Title-->
+      <div class="text-center flex-1 hidden md:block">
+        <span class="text-4xl font-bold text-pink-400 font-libre italic"
+          >Dr. Finkelsetein Clinic</span
+        >
+      </div>
+      <!-- Mobile Menu Button -->
+      <button
+        id="menuBtn"
+        class="md:hidden text-pink-700 text-3xl focus:outline-none"
+      >
+        ☰
+      </button>
+      <!-- Desktop Navigation Links -->
+      <nav
+        class="hidden md:flex flex-col item-end justify-center space-y-1 rtl:space-x-reverse font-medium"
+      >
+        <a
+          href="#about"
+          class="text-pink-500 hover:text-pink-700 transition text-right font-rubik"
+          >אודות</a
+        >
+        <a
+          href="#services"
+          class="text-pink-500 hover:text-pink-700 transition text-right"
+          >שירותים</a
+        >
+        <a
+          href="#contact"
+          class="text-pink-500 hover:text-pink-700 transition text-right"
+          >צור קשר</a
+        >
+      </nav>
+
+      <!-- Mobile Navigation Links-->
+      <div
+        id="mobileMenu"
+        class="mt-4 hidden md:hidden flex flex-col items-end space-y-2 text-pink-700 font-medium"
+      >
+        <a
+          href="#about"
+          class="mobile-link hover:text-pink-500 transition text-right w-full"
+          >אודות</a
+        >
+        <a
+          href="#services"
+          class="mobile-link hover:text-pink-500 transition text-right w-full"
+          >שירותים</a
+        >
+        <a
+          href="#contact"
+          class="mobile-link hover:text-pink-500 transition text-right w-full"
+          >צור קשר</a
+        >
+      </div>
+    </header>
+
+    <!-- 🌟 Hero Section -->
+    <section class="relative h-[70vh] overflow-hidden">
+      <!-- 🎥 Video background -->
+      <video
+        autoplay
+        muted
+        loop
+        playsinline
+        class="absolute inset-0 w-full h-full object-cover z-0"
+      >
+        <source src="videos/clinicView1.mp4" type="video/mp4" />
+        הדפדפן שלך לא תומך בווידאו.
+      </video>
+
+      <!-- 🧊 Overlay (darken for text readability) -->
+      <div class="absolute inset-0 bg-black bg-opacity-60 z-10"></div>
+
+      <!-- 🌟 Hero Content -->
+      <div
+        class="relative z-20 flex flex-col items-center justify-center h-full text-center text-white px-4"
+      >
+        <h1
+          class="text-4xl sm:text-5xl font-extrabold mb-4 drop-shadow-lg font-aguafina italic"
+        >
+          קליניקת ד"ר פינקלשטיין
+        </h1>
+        <p class="text-xl sm:text-2xl font-light mb-8 drop-shadow-md">
+          ברוכים הבאים לרפואה אסתטית ברמה הגבוהה ביותר
+        </p>
+        <a
+          href="#contact"
+          class="inline-block bg-white text-blue-700 font-semibold py-3 px-8 rounded-full text-lg hover:bg-blue-100 transition duration-300 shadow-md"
+        >
+          קביעת תור
+        </a>
+      </div>
+    </section>
+
+    <!-- 🩺 About Section -->
+    <section
+      id="about"
+      class="p-8 max-w-5xl mx-auto bg-white rounded-md shadow my-10"
+    >
+      <h2 class="text-2xl font-bold mb-4">אודות הקליניקה</h2>
+      <h3 class="text-xl font-semibold mb-2">מומחיות רפואית, יופי ואסתטיקה:</h3>
+      <p class="mb-4">
+        אנו גאים להציג את צוות המומחים שלנו, המשלב ידע רפואי מעמיק עם מומחיות
+        בתחום האסתטיקה הרפואית...
+      </p>
+      <p class="mb-4">
+        ד"ר גיל משה פינקלשטיין... מומחה לרפואת עיניים במרפאות בצפון...
+      </p>
+      <p class="mb-4">
+        ד"ר אביה פינקלשטיין – מומחית לרפואת משפחה ואסתטיקה רפואית...
+      </p>
+      <h3 class="text-xl font-semibold mb-2">הידע והמומחיות שלנו:</h3>
+      <p class="mb-4">הצוות שלנו מתמחה במגוון רחב של טיפולים אסתטיים...</p>
+      <p>אנו מחויבים להעניק לכם טיפול אישי, מקצועי ובטוח...</p>
+    </section>
+
+    <!-- 💉 Services Section -->
+    <section
+      id="services"
+      class="p-8 max-w-4xl mx-auto bg-white rounded-md shadow mb-10"
+    >
+      <h2 class="text-2xl font-bold mb-4">השירותים שלנו</h2>
+      <ul class="list-disc text-lg pr-5 space-y-2">
+        <li>בוטוקס</li>
+        <li>עיצוב שפתיים</li>
+        <li>חומצה היאלורונית</li>
+        <li>ועוד מגוון טיפולים בהתאמה אישית</li>
+      </ul>
+    </section>
+
+    <!-- 📞 Contact Section -->
+    <section
+      id="contact"
+      class="p-8 max-w-4xl mx-auto bg-white rounded-md shadow mb-10"
+    >
+      <h2 class="text-2xl font-bold mb-4">צור קשר</h2>
+      <p class="text-lg mb-2">📍 כתובת: אלון משהו, טל-אל, ישראל</p>
+      <p class="text-lg mb-2">📞 052-8398333</p>
+      <p class="text-lg mb-2">📞 050-3757924</p>
+      <p class="text-lg">✉️ gilfingil@gmail.com</p>
+    </section>
+
+    <!-- 🔻 Footer -->
+    <footer class="bg-gray-200 text-center py-4 text-sm">
+      &copy; קליניקת פינקלשטיין. כל הזכויות שמורות.
+    </footer>
+
+    <!-- Your JS file -->
+    <script src="script.js"></script>
+  </body>
+</html>
