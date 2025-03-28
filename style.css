@@ -2,7 +2,6 @@ body {
   font-family: Arial, Helvetica, sans-serif;
   background-color: #f2f2f2;
   color: #333;
-  padding: 40px;
   direction: rtl;
   text-align: right;
 }
@@ -30,6 +29,5 @@ section {
 footer {
   text-align: center;
   margin-top: 40px;
-  padding: 20px;
   background-color: #ddd;
 }
