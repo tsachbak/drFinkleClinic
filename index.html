@@ -142,23 +142,68 @@
     <!-- 🩺 About Section -->
     <section
       id="about"
-      class="p-6 max-w-7xl mx-auto bg-white rounded-md shadow my-10"
+      class="p-6 max-w-7xl mx-auto bg-pink-300 rounded-md shadow my-10 flex items-center space-x-6 rtl:space-x-reverse"
     >
-      <h2 class="text-2xl font-bold mb-4">אודות הקליניקה</h2>
-      <h3 class="text-xl font-semibold mb-2">מומחיות רפואית, יופי ואסתטיקה:</h3>
-      <p class="mb-4">
-        אנו גאים להציג את צוות המומחים שלנו, המשלב ידע רפואי מעמיק עם מומחיות
-        בתחום האסתטיקה הרפואית...
-      </p>
-      <p class="mb-4">
-        ד"ר גיל משה פינקלשטיין... מומחה לרפואת עיניים במרפאות בצפון...
-      </p>
-      <p class="mb-4">
-        ד"ר אביה פינקלשטיין – מומחית לרפואת משפחה ואסתטיקה רפואית...
-      </p>
-      <h3 class="text-xl font-semibold mb-2">הידע והמומחיות שלנו:</h3>
-      <p class="mb-4">הצוות שלנו מתמחה במגוון רחב של טיפולים אסתטיים...</p>
-      <p>אנו מחויבים להעניק לכם טיפול אישי, מקצועי ובטוח...</p>
+      <!-- About Text-->
+      <div
+        class="w-1/2 text-right about-text opacity-0 transform translate-x-10 transition-all duration-700"
+      >
+        <h2 class="text-2xl font-bold mb-4">אודות הקליניקה</h2>
+        <h3 class="text-xl font-semibold mb-2">
+          מומחיות רפואית, יופי ואסתטיקה:
+        </h3>
+        <p class="mb-4">
+          אנו גאים להציג את צוות המומחים שלנו, המשלב ידע רפואי מעמיק עם מומחיות
+          בתחום האסתטיקה הרפואית...
+        </p>
+        <p class="mb-4">
+          ד"ר גיל משה פינקלשטיין... מומחה לרפואת עיניים במרפאות בצפון...
+        </p>
+        <p class="mb-4">
+          ד"ר אביה פינקלשטיין – מומחית לרפואת משפחה ואסתטיקה רפואית...
+        </p>
+        <h3 class="text-xl font-semibold mb-2">הידע והמומחיות שלנו:</h3>
+        <p class="mb-4">הצוות שלנו מתמחה במגוון רחב של טיפולים אסתטיים...</p>
+        <p>אנו מחויבים להעניק לכם טיפול אישי, מקצועי ובטוח...</p>
+      </div>
+      <!-- Slideshow Container -->
+      <div class="w-1/2 relative">
+        <!-- Slideshow Images -->
+        <div
+          id="slideshow"
+          class="relative overflow-hidden rounded-md shadow-md"
+        >
+          <img
+            src="pictures/clinic/clinic_1.jpeg"
+            alt="תמונה 1"
+            class="slide absolute inset-0 w-full h-[300px] object-cover opacity-100 transition-opacity duration-700"
+          />
+          <img
+            src="pictures/clinic/clinic_2.jpeg"
+            alt="תמונה 2"
+            class="slide absolute inset-0 w-full h-[300px] object-cover opacity-0 transition-opacity duration-700"
+          />
+          <img
+            src="pictures/clinic/clinic_3.jpeg"
+            alt="תמונה 3"
+            class="slide absolute inset-0 w-full h-[300px] object-cover opacity-0 transition-opacity duration-700"
+          />
+        </div>
+
+        <!-- Navigation Buttons -->
+        <button
+          id="prevBtn"
+          class="absolute top-1/2 left-2 transform -translate-y-1/2 bg-black bg-opacity-50 text-white rounded-full p-2 hover:bg-opacity-75"
+        >
+          &#10094;
+        </button>
+        <button
+          id="nextBtn"
+          class="absolute top-1/2 right-2 transform -translate-y-1/2 bg-black bg-opacity-50 text-white rounded-full p-2 hover:bg-opacity-75"
+        >
+          &#10095;
+        </button>
+      </div>
     </section>
 
     <!-- 💉 Services Section -->
