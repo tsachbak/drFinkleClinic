@@ -40,20 +40,20 @@
     <header
       id="topPage"
       dir="ltr"
-      class="fixed top-0 left-0 w-full h-48 z-50 bg-black shadow-md py-4 px-20 grid grid-cols-3 items-center"
+      class="fixed top-0 left-0 w-full h-48 z-50 bg-black shadow-md py-4 px-20 flex items-center justify-between"
     >
       <!-- Logo -->
       <div class="flex justify-start items-center">
         <img
-          src="pictures/logo.png"
+          src="pictures/logo/logo3.png"
           alt="לוגו הקליניקה"
-          class="h-[170px] w-[170px] rounded-full"
+          class="h-[190px] w-[190px] rounded-full object-cover"
         />
       </div>
       <!-- Title-->
       <div class="text-center flex-1 hidden md:block">
-        <span class="text-4xl font-bold text-pink-400 font-libre italic"
-          >Dr. Finkelsetein Clinic</span
+        <span class="text-6xl font-bold text-pink-400 font-libre italic"
+          >Dr. Finkelstein Clinics</span
         >
       </div>
       <!-- Mobile Menu Button and Links -->
@@ -95,7 +95,7 @@
       </div>
       <!-- Desktop Navigation Links -->
       <nav
-        class="hidden md:flex flex-col item-end justify-center space-y-1 rtl:space-x-reverse font-medium"
+        class="hidden md:flex w-40 flex-col item-end justify-center space-y-1 rtl:space-x-reverse font-medium absolute top-0 right-0 h-full pr-4"
       >
         <a
           href="#heroSection"
@@ -123,7 +123,7 @@
     <!-- 🌟 Hero Section -->
     <section
       id="heroSection"
-      class="relative h-[90vh] bg-center bg-cover flex items-center justify-center pt-32"
+      class="relative h-[50vh] bg-center bg-cover flex items-center justify-center pt-32"
       style="margin-top: 7%"
     >
       <!-- 🎥 Video background -->
@@ -191,6 +191,7 @@
     <footer
       class="bg-black text-center py-4 text-sm fixed bottom-0 w-full flex justify-center items-center space-x-2 rtl:space-x-reverse z-50 opacity-20 hover:opacity-100 transition"
     >
+      <!-- Instegram -->
       <a
         href="https://www.instagram.com/dr.finkelstein_clinics/"
         target="_blank"
@@ -199,6 +200,7 @@
       >
         <i class="fab fa-instagram text-2xl"></i>
       </a>
+      <!-- FaceBook -->
       <a
         href="https://www.facebook.com/profile.php?id=61564889647693"
         target="_blank"
@@ -207,6 +209,27 @@
       >
         <i class="fab fa-facebook text-2xl"></i>
       </a>
+      <!-- Waze  -->
+      <a
+        href="https://waze.com/ul?q=האלון%2016%20טל-אל&navigate=yes"
+        target="_blank"
+        class="text-white hover:text-gray-300 transition"
+        aria-label="Navigate with Waze"
+      >
+        <i class="fab fa-waze text-2xl"></i>
+      </a>
+
+      <!-- Google Maps -->
+      <a
+        href="https://www.google.com/maps?q=האלון+16+טל-אל"
+        target="_blank"
+        class="text-green-500 hover:text-green-700 transition"
+        aria-label="Navigate with Google Maps"
+      >
+        <i class="fas fa-map-marker-alt text-2xl"></i>
+      </a>
+
+      <!-- Copyrights -->
       <span class="text-white"
         >&copy; קליניקת פינקלשטיין. כל הזכויות שמורות.</span
       >
