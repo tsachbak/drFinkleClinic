@@ -67,3 +67,8 @@ const observer = new IntersectionObserver(
 
 // Observe the "About" text
 observer.observe(aboutText);
+
+// Add event listeners to service buttons
+function handleServiceClick(serviceName) {
+  alert(`You clicked on the ${serviceName} service!`);
+}
