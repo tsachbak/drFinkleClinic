@@ -87,6 +87,11 @@
             >שירותים</a
           >
           <a
+            href="#recommendations"
+            class="mobile-link hover:text-pink-500 transition text-right w-full"
+            >המלצות</a
+          >
+          <a
             href="#contact"
             class="mobile-link hover:text-pink-500 transition text-right w-full"
             >צור קשר</a
@@ -111,6 +116,11 @@
           href="#services"
           class="text-pink-500 hover:text-pink-700 transition text-right"
           >שירותים</a
+        >
+        <a
+          href="#recommendations"
+          class="text-pink-500 hover:text-pink-700 transition text-right"
+          >המלצות</a
         >
         <a
           href="#contact"
@@ -234,26 +244,26 @@
       class="p-8 max-w-7xl mx-auto bg-white rounded-md shadow mb-10"
     >
       <h2 class="text-2xl font-bold mb-6 text-center">השירותים שלנו</h2>
-      <div class="grid grid-cols-2 md:grid-cols-3 gap-6">
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
         <!-- Service 1 - Botox -->
         <div class="service-item text-center">
           <h3 class="text-lg font-semibold mb-2">בוטוקס</h3>
           <img
-            src="pictures/botox/botox_1.jpeg"
+            src="pictures/servicies/botox.jpeg"
             alt="botox"
-            class="w-full h-[200px] object-cover rounded-md shadow-md cursor-pointer hover:opacity-80 transition"
+            class="w-full h-[300px] object-cover rounded-md shadow-md cursor-pointer hover:opacity-80 transition"
             onclick="handleServiceClick('botox')"
           />
         </div>
 
-        <!-- Service 2 - Lips -->
+        <!-- Service 2 - Skin Booster -->
         <div class="service-item text-center">
-          <h3 class="text-lg font-semibold mb-2">עיצוב שפתיים</h3>
+          <h3 class="text-lg font-semibold mb-2">סקין בוסטר ומרקם עור</h3>
           <img
-            src="pictures/hyaluronicAcid/hyaluronic Acid_1.jpeg"
-            alt="lips"
-            class="w-full h-[200px] object-cover rounded-md shadow-md cursor-pointer hover:opacity-80 transition"
-            onclick="handleServiceClick('lips')"
+            src="pictures/servicies/skinBooster.jpeg"
+            alt="skinBooster"
+            class="w-full h-[300px] object-cover rounded-md shadow-md cursor-pointer hover:opacity-80 transition"
+            onclick="handleServiceClick('skinBooster')"
           />
         </div>
 
@@ -261,12 +271,88 @@
         <div class="service-item text-center">
           <h3 class="text-lg font-semibold mb-2">חומצה היאלורונית</h3>
           <img
-            src="pictures/hyaluronicAcid/hyaluronic Acid_6.jpeg"
+            src="pictures/servicies/hyaluronicAcid.jpeg"
             alt="hyaluronicAcid"
-            class="w-full h-[200px] object-cover rounded-md shadow-md cursor-pointer hover:opacity-80 transition"
+            class="w-full h-[300px] object-cover rounded-md shadow-md cursor-pointer hover:opacity-80 transition"
             onclick="handleServiceClick('hyaluronicAcid')"
           />
         </div>
+        <!-- Service 4 Prp -->
+        <div class="service-item text-center">
+          <h3 class="text-lg font-semibold mb-2">Prp</h3>
+          <img
+            src="pictures/servicies/prp.jpeg"
+            alt="prp"
+            class="w-full h-[300px] object-cover rounded-md shadow-md cursor-pointer hover:opacity-80 transition"
+            onclick="handleServiceClick('prp')"
+          />
+        </div>
+      </div>
+    </section>
+
+    <!-- Placeholder for the Selected Service Description -->
+    <section
+      id="selected-service"
+      class="p-8 max-w-7xl mx-auto bg-white-100 rounded-md shadow mb-10 hidden"
+    >
+      <!-- Content will be dynamically inserted here -->
+    </section>
+
+    <!-- 📝 Recommendations Section -->
+    <section
+      id="recommendations"
+      class="p-8 max-w-7xl mx-auto bg-pink-100 rounded-md shadow mb-10"
+    >
+      <h2 class="text-2xl font-bold mb-6 text-center">המלצות</h2>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <!-- Recommendation 1 -->
+        <div class="bg-white p-6 rounded-md shadow-md">
+          <img
+            src="pictures/recommendations/reco_1.jpeg"
+            alt="Recommendation 1"
+            class="w-full h-[300px] object-contain rounded-md shadow-md cursor-pointer hover:opacity-80 transition"
+            onclick="showImageModal('pictures/recommendations/reco_1.jpeg')"
+          />
+        </div>
+
+        <!-- Recommendation 2 -->
+        <div class="bg-white p-6 rounded-md shadow-md">
+          <img
+            src="pictures/recommendations/reco_2.jpeg"
+            alt="Recommendation 2"
+            class="w-full h-[300px] object-contain rounded-md shadow-md cursor-pointer hover:opacity-80 transition"
+            onclick="showImageModal('pictures/recommendations/reco_2.jpeg')"
+          />
+        </div>
+
+        <!-- Recommendation 3 -->
+        <div class="bg-white p-6 rounded-md shadow-md">
+          <img
+            src="pictures/recommendations/reco_3.jpeg"
+            alt="Recommendation 3"
+            class="w-full h-[300px] object-contain rounded-md shadow-md cursor-pointer hover:opacity-80 transition"
+            onclick="showImageModal('pictures/recommendations/reco_3.jpeg')"
+          />
+        </div>
+
+        <!-- Recommendation 4 -->
+        <div class="bg-white p-6 rounded-md shadow-md">
+          <img
+            src="pictures/recommendations/reco_4.jpeg"
+            alt="Recommendation 4"
+            class="w-full h-[300px] object-contain rounded-md shadow-md cursor-pointer hover:opacity-80 transition"
+            onclick="showImageModal('pictures/recommendations/reco_4.jpeg')"
+          />
+        </div>
+
+        <!-- Recommendation 5 -->
+        <div class="bg-white p-6 rounded-md shadow-md">
+          <img
+            src="pictures/recommendations/reco_5.jpeg"
+            alt="Recommendation 5"
+            class="w-full h-[300px] object-contain rounded-md shadow-md cursor-pointer hover:opacity-80 transition"
+            onclick="showImageModal('pictures/recommendations/reco_5.jpeg')"
+          />
         </div>
       </div>
     </section>
@@ -335,3 +421,4 @@
     <script src="script.js"></script>
   </body>
 </html>
+```
