@@ -115,6 +115,17 @@ footer {
   padding: 0 10px; /* Add spacing between images */
 }
 
+/* Add hover effect to recommendation images */
+#recommendationsList img {
+  cursor: pointer;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+#recommendationsList img:hover {
+  transform: scale(1.05); /* Slight zoom effect */
+  opacity: 0.9; /* Slight fade effect */
+}
+
 #prevArrow,
 #nextArrow {
   cursor: pointer;
