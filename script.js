@@ -44,6 +44,44 @@ document.getElementById("prevBtn").addEventListener("click", prevSlide);
 // Auto-play the slideshow every 5 seconds
 setInterval(nextSlide, 5000);
 
+// Function to show an image in full screen
+function showImageModal(imageSrc) {
+  // Create a modal container
+  const modal = document.createElement("div");
+  modal.id = "imageModal";
+  modal.className =
+    "fixed inset-0 bg-black bg-opacity-80 flex items-center justify-center z-50";
+
+  // Create the image element
+  const img = document.createElement("img");
+  img.src = imageSrc;
+  img.alt = "Full-screen image";
+  img.className = "max-w-full max-h-full rounded-md shadow-lg";
+
+  // Create a close button
+  const closeButton = document.createElement("button");
+  closeButton.innerHTML = "&times;";
+  closeButton.className =
+    "absolute top-4 right-4 text-white text-4xl font-bold focus:outline-none";
+  closeButton.addEventListener("click", () => {
+    modal.remove(); // Remove the modal when the close button is clicked
+  });
+
+  // Add the image and close button to the modal
+  modal.appendChild(img);
+  modal.appendChild(closeButton);
+
+  // Add a click event to close the modal when clicking outside the image
+  modal.addEventListener("click", (e) => {
+    if (e.target === modal) {
+      modal.remove();
+    }
+  });
+
+  // Append the modal to the body
+  document.body.appendChild(modal);
+}
+
 /*
 // Select the "About" text container
 const aboutText = document.querySelector(".about-text");
