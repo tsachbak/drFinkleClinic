@@ -44,6 +44,7 @@ document.getElementById("prevBtn").addEventListener("click", prevSlide);
 // Auto-play the slideshow every 5 seconds
 setInterval(nextSlide, 5000);
 
+/*
 // Select the "About" text container
 const aboutText = document.querySelector(".about-text");
 
@@ -67,6 +68,7 @@ const observer = new IntersectionObserver(
 
 // Observe the "About" text
 observer.observe(aboutText);
+*/
 
 // Add event listeners to service buttons
 function handleServiceClick(serviceName) {

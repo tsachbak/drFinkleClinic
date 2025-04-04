@@ -59,7 +59,7 @@ footer {
 
 /* Initial state for the animation */
 .about-text {
-  opacity: 0;
+  opacity: 1;
   transform: translateX(10px); /* Start slightly off-screen */
   transition: all 0.7s ease-in-out;
 }
@@ -80,4 +80,96 @@ footer {
 
 .about-text p {
   transition-delay: 0.6s;
+}
+
+/* Responsive styles for phone mode */
+@media (max-width: 768px) {
+  /* Make the top bar narrower */
+  header#topPage {
+    height: 80px; /* Reduce the height */
+    padding: 10px; /* Adjust padding */
+  }
+
+  /* Adjust the logo size */
+  header#topPage img {
+    height: 80px; /* Smaller logo height */
+    width: 80px; /* Smaller logo width */
+  }
+
+  /* Adjust the title font size */
+  header#topPage .text-center span {
+    font-size: 1.5rem; /* Smaller font size */
+  }
+
+  /* Adjust the mobile menu button */
+  header#topPage #menuBtn {
+    font-size: 2rem; /* Smaller menu button */
+    top: 50%; /* Center vertically */
+    right: 10px; /* Adjust position */
+  }
+
+  /* Fix the mobile menu dropdown */
+  #mobileMenu {
+    top: 50px; /* Adjust dropdown position to match the header height */
+    right: 0px;
+    width: 100px; /* Full width for mobile menu */
+    max-height: calc(100vh - 80px); /* Ensure it doesn't overflow the screen */
+    overflow-y: auto; /* Add scrolling if the content is too long */
+    background-color: black; /* Ensure the background is visible */
+    opacity: 0.8;
+    z-index: 1000; /* Ensure it appears above other elements */
+  }
+
+  #mobileMenu a {
+    font-size: 1rem; /* Smaller font size for links */
+    padding: 10px 15px; /* Adjust padding for better spacing */
+    display: block; /* Ensure links take up full width */
+    text-align: right; /* Align text to the right */
+    white-space: nowrap; /* Prevent text wrapping */
+  }
+
+  /* Responsive styles for the About Section */
+  #about {
+    flex-direction: column; /* Stack items vertically */
+    align-items: center; /* Center align the items */
+    text-align: center; /* Center the text */
+  }
+
+  .about-text {
+    width: 100%; /* Full width for the text */
+    margin-bottom: 20px; /* Add spacing below the text */
+  }
+
+  #slideshow {
+    width: 100%; /* Full width for the slideshow */
+  }
+
+  #slideshow img {
+    max-height: 300px; /* Limit the height of the images */
+    object-fit: cover; /* Ensure the images fit nicely */
+  }
+}
+
+/* Mobile-specific styles for the slideshow */
+@media (max-width: 768px) {
+  #slideshow {
+    min-height: 300px;
+    min-width: 150px;
+    width: 100%; /* Full width for the slideshow */
+    height: auto; /* Let the height adjust based on the content */
+    margin-top: 20px; /* Add spacing between the text and the slideshow */
+  }
+
+  #slideshow img {
+    width: 100%; /* Ensure the image takes the full width of the container */
+    height: 100%; /* Maintain the aspect ratio */
+    object-fit: cover; /* Ensure the image covers the container nicely */
+    border-radius: 10px; /* Add rounded corners for a polished look */
+  }
+}
+
+@media (max-width: 768px) {
+  footer {
+    opacity: 1 !important;
+  }
 }
