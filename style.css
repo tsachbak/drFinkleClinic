@@ -1,3 +1,4 @@
+/* General Styles */
 html {
   scroll-padding-top: 14rem; /* Adjust based on your header height */
 }
@@ -36,6 +37,7 @@ footer {
   background-color: #ddd;
 }
 
+/* Slideshow Styles */
 #slideshow {
   position: relative;
   width: 100%;
@@ -102,46 +104,6 @@ footer {
   content: "After";
 }
 
-/* Initial state for the animation */
-.about-text {
-  opacity: 1;
-  transform: translateX(10px); /* Start slightly off-screen */
-  transition: all 0.7s ease-in-out;
-}
-
-/* When the text is visible */
-.about-text.visible {
-  opacity: 1;
-  transform: translateX(0); /* Slide into place */
-}
-
-.about-text h2 {
-  transition-delay: 0.2s;
-}
-
-.about-text h3 {
-  transition-delay: 0.4s;
-}
-
-.about-text p {
-  transition-delay: 0.6s;
-}
-
-/* Modal styles */
-#imageModal {
-  animation: fadeIn 0.3s ease-in-out;
-}
-
-/* Fade-in animation */
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
-}
-
 /* Recommendations Section Carousel */
 #recommendations {
   position: relative;
@@ -160,7 +122,6 @@ footer {
   padding: 0 10px; /* Add spacing between images */
 }
 
-/* Add hover effect to recommendation images */
 #recommendationsList img {
   cursor: pointer;
   transition: transform 0.3s ease, opacity 0.3s ease;
@@ -172,23 +133,7 @@ footer {
 }
 
 #prevArrow,
-#nextArrow {
-  cursor: pointer;
-  width: 40px;
-  height: 40px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 1.5rem;
-  opacity: 0.8;
-  transition: opacity 0.3s ease;
-}
-
-#prevArrow:hover,
-#nextArrow:hover {
-  opacity: 1;
-}
-
+#nextArrow,
 #beforeAfterPrevBtn,
 #beforeAfterNextBtn {
   cursor: pointer;
@@ -202,38 +147,36 @@ footer {
   transition: opacity 0.3s ease;
 }
 
+#prevArrow:hover,
+#nextArrow:hover,
 #beforeAfterPrevBtn:hover,
 #beforeAfterNextBtn:hover {
   opacity: 1;
 }
 
-/* Responsive styles for phone mode */
+/* Responsive Styles */
 @media (max-width: 768px) {
-  /* Make the top bar narrower */
+  /* Header Adjustments */
   header#topPage {
     height: 80px; /* Reduce the height */
     padding: 10px; /* Adjust padding */
   }
 
-  /* Adjust the logo size */
   header#topPage img {
-    height: 80px; /* Smaller logo height */
-    width: 80px; /* Smaller logo width */
+    height: 70px; /* Smaller logo height */
+    width: 70px; /* Smaller logo width */
   }
 
-  /* Adjust the title font size */
   header#topPage .text-center span {
     font-size: 1.5rem; /* Smaller font size */
   }
 
-  /* Adjust the mobile menu button */
   header#topPage #menuBtn {
     font-size: 2rem; /* Smaller menu button */
     top: 50%; /* Center vertically */
     right: 10px; /* Adjust position */
   }
 
-  /* Fix the mobile menu dropdown */
   #mobileMenu {
     top: 50px; /* Adjust dropdown position to match the header height */
     right: 0px;
@@ -253,7 +196,7 @@ footer {
     white-space: nowrap; /* Prevent text wrapping */
   }
 
-  /* Responsive styles for the About Section */
+  /* About Section Adjustments */
   #about {
     flex-direction: column; /* Stack items vertically */
     align-items: left; /* Center align the items */
@@ -265,8 +208,13 @@ footer {
     margin-bottom: 20px; /* Add spacing below the text */
   }
 
+  /* Slideshow Adjustments */
   #slideshow {
+    min-height: 300px;
+    min-width: 150px;
     width: 100%; /* Full width for the slideshow */
+    height: auto; /* Let the height adjust based on the content */
+    margin-top: 20px; /* Add spacing between the text and the slideshow */
   }
 
   #slideshow img {
@@ -279,56 +227,21 @@ footer {
     width: 100%; /* Each item takes the full width of the container */
     padding: 0; /* Remove padding for a cleaner look */
   }
-}
 
-@media (max-width: 768px) {
-  #slideshow {
-    min-height: 300px;
-    min-width: 150px;
-    width: 100%; /* Full width for the slideshow */
-    height: auto; /* Let the height adjust based on the content */
-    margin-top: 20px; /* Add spacing between the text and the slideshow */
-  }
-
-  #slideshow img {
-    width: 100%; /* Ensure the image takes the full width of the container */
-    height: 100%; /* Maintain the aspect ratio */
-    object-fit: cover; /* Ensure the image covers the container nicely */
-    border-radius: 10px; /* Add rounded corners for a polished look */
-  }
-}
-
-@media (max-width: 768px) {
-  footer {
-    opacity: 1 !important;
-  }
-}
-
-@media (max-width: 768px) {
-  .logo-img {
-    width: 60px !important; /* Adjust the width for mobile */
-    height: 60px !important; /* Adjust the height for mobile */
-  }
-}
-
-@media (max-width: 768px) {
+  /* Before-After Section Adjustments */
   #beforeAfterSlideshow {
-    display: flex; /* Use flexbox for centering */
-    justify-content: center; /* Center horizontally */
-    align-items: center; /* Center vertically */
-    position: relative; /* Ensure proper positioning for child elements */
-    overflow: hidden; /* Hide any overflow */
     height: 300px; /* Set a fixed height for the container */
-    background: #000;
   }
-}
 
-@media (max-width: 768px) {
   #beforeAfterSlideshow img {
     width: 100%;
     height: 100%;
     object-position: center;
     max-width: 100%; /* Slightly reduce the image size for mobile */
     max-height: 100%; /* Ensure the image fits within the container */
+  }
+
+  footer {
+    opacity: 1 !important;
   }
 }
