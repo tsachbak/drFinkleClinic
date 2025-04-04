@@ -248,8 +248,17 @@ const prevArrow = document.getElementById("prevArrow");
 const nextArrow = document.getElementById("nextArrow");
 
 let currentIndex = 0; // Track the current index
-const itemsToShow = 3; // Number of items visible at a time
+let itemsToShow = 3; // Default number of items visible at a time
 const totalItems = recommendationsList.children.length;
+
+// Function to dynamically set itemsToShow based on screen size
+function updateItemsToShow() {
+  if (window.innerWidth <= 768) {
+    itemsToShow = 1; // Show 1 item in mobile view
+  } else {
+    itemsToShow = 3; // Show 3 items in desktop view
+  }
+}
 
 // Function to update the carousel position
 function updateCarousel() {
@@ -276,4 +285,13 @@ prevArrow.addEventListener("click", () => {
 });
 
 // Initialize the carousel
-updateCarousel();
+window.addEventListener("load", () => {
+  updateItemsToShow(); // Set the correct number of items to show
+  updateCarousel(); // Ensure the carousel starts at the correct position
+});
+
+// Recalculate itemsToShow and update the carousel on window resize
+window.addEventListener("resize", () => {
+  updateItemsToShow();
+  updateCarousel();
+});

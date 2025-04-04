@@ -199,6 +199,12 @@ footer {
     max-height: 300px; /* Limit the height of the images */
     object-fit: cover; /* Ensure the images fit nicely */
   }
+
+  /* Recommendations Section Carousel - Mobile View */
+  #recommendationsList li {
+    width: 100%; /* Each item takes the full width of the container */
+    padding: 0; /* Remove padding for a cleaner look */
+  }
 }
 
 /* Mobile-specific styles for the slideshow */
