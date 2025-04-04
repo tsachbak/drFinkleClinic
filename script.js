@@ -359,7 +359,7 @@ function showBeforeAfterSection(serviceKey) {
     const img = document.createElement("img");
     img.src = imageSrc;
     img.alt = `Before-After ${index + 1}`;
-    img.className = `pb-5 pt-5 bg-pink-200 slide ${
+    img.className = `pl-5 pr-5 pb-5 pt-5 bg-pink-200 slide ${
       index === 0 ? "active" : ""
     }`;
     slideshowContainer.appendChild(img);

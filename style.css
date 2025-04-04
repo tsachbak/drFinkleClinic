@@ -59,23 +59,19 @@ footer {
 
 /* Before-After Section Slideshow */
 #beforeAfterSlideshow {
-  position: relative;
-  overflow: hidden;
-  background-color: #f2f2f2; /* Light gray background */
+  display: flex; /* Enable flexbox */
+  justify-content: center; /* Center horizontally */
+  align-items: center; /* Center vertically */
+  position: relative; /* Ensure proper positioning for child elements */
+  overflow: hidden; /* Hide any overflow */
+  height: 400px; /* Maintain the height */
 }
 
 #beforeAfterSlideshow img {
-  position: absolute;
-  inset: 0;
-  width: 100%; /* Make the image take the full width of the container */
-  height: 100%; /* Make the image take the full height of the container */
+  max-width: 100%; /* Ensure the image doesn't exceed the container's width */
+  max-height: 100%; /* Ensure the image doesn't exceed the container's height */
   object-fit: contain; /* Ensure the entire image is visible */
-  opacity: 0;
-  transition: opacity 0.7s ease-in-out;
-}
-
-#beforeAfterSlideshow img.active {
-  opacity: 1;
+  object-position: center; /* Center the image within the container */
 }
 
 /* Add a gradient overlay to indicate "Before" and "After" */
@@ -283,11 +279,6 @@ footer {
     width: 100%; /* Each item takes the full width of the container */
     padding: 0; /* Remove padding for a cleaner look */
   }
-
-  #beforeAfterSlideshow img {
-    width: 90%; /* Reduce the width further for smaller screens */
-    height: auto; /* Maintain aspect ratio */
-  }
 }
 
 @media (max-width: 768px) {
@@ -317,5 +308,27 @@ footer {
   .logo-img {
     width: 60px !important; /* Adjust the width for mobile */
     height: 60px !important; /* Adjust the height for mobile */
+  }
+}
+
+@media (max-width: 768px) {
+  #beforeAfterSlideshow {
+    display: flex; /* Use flexbox for centering */
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    position: relative; /* Ensure proper positioning for child elements */
+    overflow: hidden; /* Hide any overflow */
+    height: 300px; /* Set a fixed height for the container */
+    background: #000;
+  }
+}
+
+@media (max-width: 768px) {
+  #beforeAfterSlideshow img {
+    width: 100%;
+    height: 100%;
+    object-position: center;
+    max-width: 100%; /* Slightly reduce the image size for mobile */
+    max-height: 100%; /* Ensure the image fits within the container */
   }
 }
