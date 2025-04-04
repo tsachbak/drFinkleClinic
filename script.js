@@ -241,3 +241,39 @@ function handleServiceClick(serviceKey) {
   // Scroll to the service section
   serviceSection.scrollIntoView({ behavior: "smooth" });
 }
+
+// Carousel functionality for recommendations
+const recommendationsList = document.getElementById("recommendationsList");
+const prevArrow = document.getElementById("prevArrow");
+const nextArrow = document.getElementById("nextArrow");
+
+let currentIndex = 0; // Track the current index
+const itemsToShow = 3; // Number of items visible at a time
+const totalItems = recommendationsList.children.length;
+
+// Function to update the carousel position
+function updateCarousel() {
+  const itemWidth = recommendationsList.children[0].offsetWidth;
+  recommendationsList.style.transform = `translateX(-${
+    currentIndex * itemWidth
+  }px)`;
+}
+
+// Event listener for the next arrow
+nextArrow.addEventListener("click", () => {
+  if (currentIndex < totalItems - itemsToShow) {
+    currentIndex++;
+    updateCarousel();
+  }
+});
+
+// Event listener for the previous arrow
+prevArrow.addEventListener("click", () => {
+  if (currentIndex > 0) {
+    currentIndex--;
+    updateCarousel();
+  }
+});
+
+// Initialize the carousel
+updateCarousel();
