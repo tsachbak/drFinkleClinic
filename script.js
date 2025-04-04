@@ -240,6 +240,9 @@ function handleServiceClick(serviceKey) {
 
   // Scroll to the service section
   serviceSection.scrollIntoView({ behavior: "smooth" });
+
+  // Show the Before-After section
+  showBeforeAfterSection(serviceKey);
 }
 
 // Carousel functionality for recommendations
@@ -294,4 +297,82 @@ window.addEventListener("load", () => {
 window.addEventListener("resize", () => {
   updateItemsToShow();
   updateCarousel();
+});
+
+// Data for Before-After images (example)
+const beforeAfterData = {
+  botox: [
+    "pictures/botox/botox_1.jpeg",
+    "pictures/botox/botox_2.jpeg",
+    "pictures/botox/botox_3.jpeg",
+    "pictures/botox/botox_4.jpeg",
+  ],
+  skinBooster: [
+    "pictures/beforeAfter/skinBooster_1.jpeg",
+    "pictures/beforeAfter/skinBooster_2.jpeg",
+  ],
+  hyaluronicAcid: [
+    "pictures/hyaluronicAcid/hyaluronic Acid_1.jpeg",
+    "pictures/hyaluronicAcid/hyaluronic Acid_2.jpeg",
+    "pictures/hyaluronicAcid/hyaluronic Acid_3.jpeg",
+    "pictures/hyaluronicAcid/hyaluronic Acid_4.jpeg",
+    "pictures/hyaluronicAcid/hyaluronic Acid_5.jpeg",
+    "pictures/hyaluronicAcid/hyaluronic Acid_6.jpeg",
+  ],
+  prp: ["pictures/beforeAfter/prp_1.jpeg", "pictures/beforeAfter/prp_2.jpeg"],
+};
+
+let currentBeforeAfterIndex = 0;
+
+// Function to show the Before-After section
+function showBeforeAfterSection(serviceKey) {
+  const beforeAfterSection = document.getElementById("before-after");
+  const slideshowContainer = document.getElementById("beforeAfterSlideshow");
+
+  // Clear existing images
+  slideshowContainer.innerHTML = "";
+
+  // Get the before-after images for the selected service
+  const images = beforeAfterData[serviceKey];
+  if (!images) return;
+
+  // Add images to the slideshow
+  images.forEach((imageSrc, index) => {
+    const img = document.createElement("img");
+    img.src = imageSrc;
+    img.alt = `Before-After ${index + 1}`;
+    img.className = `pb-5 pt-5 bg-pink-200 slide ${
+      index === 0 ? "active" : ""
+    }`;
+    slideshowContainer.appendChild(img);
+  });
+
+  // Show the section
+  beforeAfterSection.classList.remove("hidden");
+
+  // Reset the slideshow index
+  currentBeforeAfterIndex = 0;
+  updateBeforeAfterSlideshow();
+}
+
+// Function to update the Before-After slideshow
+function updateBeforeAfterSlideshow() {
+  const slides = document.querySelectorAll("#beforeAfterSlideshow .slide");
+  slides.forEach((slide, index) => {
+    slide.classList.toggle("active", index === currentBeforeAfterIndex);
+  });
+}
+
+// Event listeners for Before-After navigation buttons
+document.getElementById("beforeAfterNextBtn").addEventListener("click", () => {
+  const slides = document.querySelectorAll("#beforeAfterSlideshow .slide");
+  currentBeforeAfterIndex = (currentBeforeAfterIndex + 1) % slides.length;
+  updateBeforeAfterSlideshow();
+});
+
+document.getElementById("beforeAfterPrevBtn").addEventListener("click", () => {
+  const slides = document.querySelectorAll("#beforeAfterSlideshow .slide");
+  currentBeforeAfterIndex =
+    (currentBeforeAfterIndex - 1 + slides.length) % slides.length;
+  updateBeforeAfterSlideshow();
 });

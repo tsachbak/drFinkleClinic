@@ -57,6 +57,55 @@ footer {
   opacity: 1;
 }
 
+/* Before-After Section Slideshow */
+#beforeAfterSlideshow {
+  position: relative;
+  overflow: hidden;
+  background-color: #f2f2f2; /* Light gray background */
+}
+
+#beforeAfterSlideshow img {
+  position: absolute;
+  inset: 0;
+  width: 100%; /* Make the image take the full width of the container */
+  height: 100%; /* Make the image take the full height of the container */
+  object-fit: contain; /* Ensure the entire image is visible */
+  opacity: 0;
+  transition: opacity 0.7s ease-in-out;
+}
+
+#beforeAfterSlideshow img.active {
+  opacity: 1;
+}
+
+/* Add a gradient overlay to indicate "Before" and "After" */
+#beforeAfterSlideshow img::before,
+#beforeAfterSlideshow img::after {
+  content: "";
+  position: absolute;
+  width: full;
+  height: full;
+  left: 0;
+  background: rgba(0, 0, 0, 0.3);
+  color: white;
+  font-size: 1.5rem;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1;
+}
+
+#beforeAfterSlideshow img::before {
+  top: 0;
+  content: "Before";
+}
+
+#beforeAfterSlideshow img::after {
+  bottom: 0;
+  content: "After";
+}
+
 /* Initial state for the animation */
 .about-text {
   opacity: 1;
@@ -144,6 +193,24 @@ footer {
   opacity: 1;
 }
 
+#beforeAfterPrevBtn,
+#beforeAfterNextBtn {
+  cursor: pointer;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  opacity: 0.8;
+  transition: opacity 0.3s ease;
+}
+
+#beforeAfterPrevBtn:hover,
+#beforeAfterNextBtn:hover {
+  opacity: 1;
+}
+
 /* Responsive styles for phone mode */
 @media (max-width: 768px) {
   /* Make the top bar narrower */
@@ -215,6 +282,11 @@ footer {
   #recommendationsList li {
     width: 100%; /* Each item takes the full width of the container */
     padding: 0; /* Remove padding for a cleaner look */
+  }
+
+  #beforeAfterSlideshow img {
+    width: 90%; /* Reduce the width further for smaller screens */
+    height: auto; /* Maintain aspect ratio */
   }
 }
 
