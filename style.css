@@ -290,7 +290,6 @@ footer {
   }
 }
 
-/* Mobile-specific styles for the slideshow */
 @media (max-width: 768px) {
   #slideshow {
     min-height: 300px;
@@ -311,5 +310,12 @@ footer {
 @media (max-width: 768px) {
   footer {
     opacity: 1 !important;
+  }
+}
+
+@media (max-width: 768px) {
+  .logo-img {
+    width: 60px !important; /* Adjust the width for mobile */
+    height: 60px !important; /* Adjust the height for mobile */
   }
 }
