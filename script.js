@@ -82,32 +82,6 @@ function showImageModal(imageSrc) {
   document.body.appendChild(modal);
 }
 
-/*
-// Select the "About" text container
-const aboutText = document.querySelector(".about-text");
-
-// Create an Intersection Observer
-const observer = new IntersectionObserver(
-  (entries) => {
-    entries.forEach((entry) => {
-      if (entry.isIntersecting) {
-        // Add the "visible" class when the element is in the viewport
-        aboutText.classList.add("visible");
-      } else {
-        // Remove the "visible" class when the element is out of the viewport
-        aboutText.classList.remove("visible");
-      }
-    });
-  },
-  {
-    threshold: 0.5, // Trigger when 50% of the element is visible
-  }
-);
-
-// Observe the "About" text
-observer.observe(aboutText);
-*/
-
 // Add event listeners to service buttons
 function handleServiceClick(serviceName) {
   alert(`You clicked on the ${serviceName} service!`);
@@ -393,4 +367,47 @@ document.getElementById("beforeAfterPrevBtn").addEventListener("click", () => {
   currentBeforeAfterIndex =
     (currentBeforeAfterIndex - 1 + slides.length) % slides.length;
   updateBeforeAfterSlideshow();
+});
+
+document.getElementById("submitBtn").addEventListener("click", function () {
+  // Get form values
+  const firstName = document.getElementById("firstName").value;
+  const lastName = document.getElementById("lastName").value;
+  const phoneNumber = document.getElementById("phoneNumber").value;
+  const treatment = document.getElementById("treatment").value;
+
+  // Validate form fields
+  if (!firstName || !lastName || !phoneNumber || !treatment) {
+    alert("אנא מלאו את כל השדות.");
+    return;
+  }
+
+  // Prepare data to send
+  const formData = {
+    firstName,
+    lastName,
+    phoneNumber,
+    treatment,
+  };
+
+  // Send data to the server
+  fetch("https://localhost:7167/Users/submit", {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify(formData),
+  })
+    .then((response) => {
+      if (response.ok) {
+        alert("הפרטים נשלחו בהצלחה! נחזור אליכם בהקדם.");
+        document.getElementById("contactForm").reset(); // Clear the form
+      } else {
+        alert("אירעה שגיאה. נסו שוב מאוחר יותר.");
+      }
+    })
+    .catch((error) => {
+      console.error("Error:", error);
+      alert("אירעה שגיאה. נסו שוב מאוחר יותר.");
+    });
 });

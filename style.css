@@ -153,6 +153,22 @@ footer {
   opacity: 1;
 }
 
+/* Contact Form Styles */
+#contactForm {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem; /* Add spacing between rows */
+}
+
+#contactForm .flex {
+  display: flex;
+  gap: 1rem; /* Add spacing between fields in the same row */
+}
+
+#contactForm .flex-1 {
+  flex: 1; /* Ensure fields take equal width */
+}
+
 /* Responsive Styles */
 @media (max-width: 768px) {
   /* Header Adjustments */
