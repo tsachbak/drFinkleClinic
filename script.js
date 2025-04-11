@@ -391,7 +391,7 @@ document.getElementById("submitBtn").addEventListener("click", function () {
   };
 
   // Send data to the server
-  fetch("https://localhost:7167/Users/submit", {
+  fetch("https://drfikiserver.onrender.com/Users/submit", {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
