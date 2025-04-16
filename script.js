@@ -15,7 +15,7 @@ mobileLinks.forEach((link) => {
   });
 });
 
-const slides = document.querySelectorAll(".slide");
+const slides = document.querySelectorAll(".about_slide");
 let currentSlide = 0;
 
 // Show the current slide
@@ -336,6 +336,10 @@ function showBeforeAfterSection(serviceKey) {
     img.className = `pl-5 pr-5 pb-5 pt-5 bg-pink-200 slide ${
       index === 0 ? "active" : ""
     }`;
+
+    img.addEventListener("click", function () {
+      showImageModal(this.src);
+    });
     slideshowContainer.appendChild(img);
   });
 
@@ -351,6 +355,7 @@ function showBeforeAfterSection(serviceKey) {
 function updateBeforeAfterSlideshow() {
   const slides = document.querySelectorAll("#beforeAfterSlideshow .slide");
   slides.forEach((slide, index) => {
+    // Toggle the active class for the current slide
     slide.classList.toggle("active", index === currentBeforeAfterIndex);
   });
 }

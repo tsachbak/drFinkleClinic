@@ -52,10 +52,12 @@ footer {
   height: 100%;
   opacity: 0;
   transition: opacity 0.7s ease-in-out;
+  pointer-events: none;
 }
 
 .slide.active {
   opacity: 1;
+  pointer-events: auto;
 }
 
 /* Before-After Section Slideshow */
