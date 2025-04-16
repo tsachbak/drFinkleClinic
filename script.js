@@ -374,6 +374,8 @@ document.getElementById("beforeAfterPrevBtn").addEventListener("click", () => {
   updateBeforeAfterSlideshow();
 });
 
+const spinnerModal = document.getElementById("spinnerModal");
+
 document.getElementById("submitBtn").addEventListener("click", function () {
   // Get form values
   const firstName = document.getElementById("firstName").value;
@@ -386,6 +388,9 @@ document.getElementById("submitBtn").addEventListener("click", function () {
     alert("אנא מלאו את כל השדות.");
     return;
   }
+
+  // Show spinner modal
+  spinnerModal.classList.remove("hidden");
 
   // Prepare data to send
   const formData = {
@@ -404,6 +409,7 @@ document.getElementById("submitBtn").addEventListener("click", function () {
     body: JSON.stringify(formData),
   })
     .then((response) => {
+      spinnerModal.classList.add("hidden");
       if (response.ok) {
         alert("הפרטים נשלחו בהצלחה! נחזור אליכם בהקדם.");
         document.getElementById("contactForm").reset(); // Clear the form
@@ -412,6 +418,7 @@ document.getElementById("submitBtn").addEventListener("click", function () {
       }
     })
     .catch((error) => {
+      spinnerModal.classList.add("hidden");
       console.error("Error:", error);
       alert("אירעה שגיאה. נסו שוב מאוחר יותר.");
     });
