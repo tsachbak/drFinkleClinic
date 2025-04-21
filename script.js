@@ -400,6 +400,42 @@ document.getElementById("submitBtn").addEventListener("click", function () {
     treatment,
   };
 
+  async function loadRecommendations() {
+    const recommendationsList = document.getElementById("recommendationsList");
+
+    try {
+      const response = await fetch(
+        "https://drfikiserver.onrender.com/recommendations"
+      );
+
+      // Clear current content
+      recommendationsList.innerHTML = "";
+
+      // Populate dynamically
+      recommendationsList.forEach((reco, index) => {
+        const li = document.createElement("li");
+        li.className = "flex-shrink-0 w-1/3 px-2";
+
+        const img = document.createElement("img");
+        img.src = "data:image/jpeg;base64,${reco.base64Image}";
+        img.alt = `Recommendation ${index + 1}`;
+        img.className =
+          "w-full h-[300px] object-contain rounded-md shadow-md curser-pointer";
+        img.onclick = () => showImageModal(img.src);
+
+        li.appendChild(img);
+        recommendationsList.appendChild(li);
+      });
+
+      currentIndex = 0; // Reset the index
+      updateCarousel(); // Update the carousel position
+    } catch (error) {
+      console.error("Error loading recommendations:", error);
+    }
+  }
+
+  window.addEventListener("DOMContentLoaded", loadRecommendations);
+
   // Send data to the server
   fetch("https://drfikiserver.onrender.com/Users/submit", {
     method: "POST",
