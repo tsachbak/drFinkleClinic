@@ -244,7 +244,7 @@ const nextArrow = document.getElementById("nextArrow");
 
 let currentIndex = 0; // Track the current index
 let itemsToShow = 3; // Default number of items visible at a time
-const totalItems = recommendationsList.children.length;
+let totalItems = recommendationsList.children.length;
 
 // Function to dynamically set itemsToShow based on screen size
 function updateItemsToShow() {
@@ -406,42 +406,6 @@ document.getElementById("submitBtn").addEventListener("click", function () {
     treatment,
   };
 
-  async function loadRecommendations() {
-    const recommendationsList = document.getElementById("recommendationsList");
-
-    try {
-      const response = await fetch(
-        "https://drfikiserver.onrender.com/recommendations"
-      );
-
-      // Clear current content
-      recommendationsList.innerHTML = "";
-
-      // Populate dynamically
-      recommendationsList.forEach((reco, index) => {
-        const li = document.createElement("li");
-        li.className = "flex-shrink-0 w-1/3 px-2";
-
-        const img = document.createElement("img");
-        img.src = "data:image/jpeg;base64,${reco.base64Image}";
-        img.alt = `Recommendation ${index + 1}`;
-        img.className =
-          "w-full h-[300px] object-contain rounded-md shadow-md curser-pointer";
-        img.onclick = () => showImageModal(img.src);
-
-        li.appendChild(img);
-        recommendationsList.appendChild(li);
-      });
-
-      currentIndex = 0; // Reset the index
-      updateCarousel(); // Update the carousel position
-    } catch (error) {
-      console.error("Error loading recommendations:", error);
-    }
-  }
-
-  window.addEventListener("DOMContentLoaded", loadRecommendations);
-
   // Send data to the server
   fetch("https://drfikiserver.onrender.com/Users/submit", {
     method: "POST",
@@ -464,4 +428,46 @@ document.getElementById("submitBtn").addEventListener("click", function () {
       console.error("Error:", error);
       alert("אירעה שגיאה. נסו שוב מאוחר יותר.");
     });
+});
+
+async function loadRecommendations() {
+  const recommendationsList = document.getElementById("recommendationsList");
+
+  try {
+    //const response = await fetch("https://localhost:7171/recommendations");
+    const response = await fetch(
+      "https://drfikiserver.onrender.com/recommendations"
+    );
+
+    const data = await response.json();
+    recommendationsList.innerHTML = "";
+
+    // Populate dynamically
+    data.forEach((reco, index) => {
+      const li = document.createElement("li");
+      li.className = "flex-shrink-0 w-1/3 px-2";
+
+      const img = document.createElement("img");
+      img.src = `data:image/jpeg;base64, ${reco.base64Image}`;
+      img.alt = `Recommendation ${index + 1}`;
+      img.className =
+        "w-full h-[300px] object-contain rounded-md shadow-md cursor-pointer";
+      img.onclick = () => showImageModal(img.src);
+
+      li.appendChild(img);
+      recommendationsList.appendChild(li);
+    });
+
+    currentIndex = 0; // Reset the index
+    totalItems = recommendationsList.children.length; // Update the total items count
+    updateCarousel(); // Update the carousel position
+  } catch (error) {
+    console.error("Error loading recommendations:", error);
+  }
+}
+
+window.addEventListener("load", () => {
+  updateItemsToShow();
+  updateCarousel();
+  loadRecommendations(); // Load recommendations on page load
 });
