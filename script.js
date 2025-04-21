@@ -257,7 +257,13 @@ function updateItemsToShow() {
 
 // Function to update the carousel position
 function updateCarousel() {
-  const itemWidth = recommendationsList.children[0].offsetWidth;
+  const recommendationsList = document.getElementById("recommendationsList");
+  const children = recommendationsList?.children;
+
+  // 💥 Fix: Skip if nothing loaded yet
+  if (!children || children.length === 0) return;
+
+  const itemWidth = children[0].offsetWidth;
   recommendationsList.style.transform = `translateX(-${
     currentIndex * itemWidth
   }px)`;
