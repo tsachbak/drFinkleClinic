@@ -297,28 +297,53 @@ window.addEventListener("resize", () => {
   updateCarousel();
 });
 
-// Data for Before-After images (example)
 const beforeAfterData = {
-  botox: [
-    "pictures/botox/botox_1.jpeg",
-    "pictures/botox/botox_2.jpeg",
-    "pictures/botox/botox_3.jpeg",
-    "pictures/botox/botox_4.jpeg",
-  ],
-  skinBooster: [
-    "pictures/beforeAfter/skinBooster_1.jpeg",
-    "pictures/beforeAfter/skinBooster_2.jpeg",
-  ],
-  hyaluronicAcid: [
-    "pictures/hyaluronicAcid/hyaluronic Acid_1.jpeg",
-    "pictures/hyaluronicAcid/hyaluronic Acid_2.jpeg",
-    "pictures/hyaluronicAcid/hyaluronic Acid_3.jpeg",
-    "pictures/hyaluronicAcid/hyaluronic Acid_4.jpeg",
-    "pictures/hyaluronicAcid/hyaluronic Acid_5.jpeg",
-    "pictures/hyaluronicAcid/hyaluronic Acid_6.jpeg",
-  ],
-  prp: ["pictures/beforeAfter/prp_1.jpeg", "pictures/beforeAfter/prp_2.jpeg"],
+  botox: [],
+  skinBooster: [],
+  hyaluronicAcid: [],
+  prp: [],
 };
+
+async function loadBeforeAfterImages() {
+  try {
+    //const response = await fetch("https://localhost:7171/BeforeAfter");
+    const response = await fetch(
+      "https://drfikiserver.onrender.com/BeforeAfter"
+    );
+    const data = await response.json();
+
+    const groupData = {
+      botox: [],
+      skinBooster: [],
+      hyaluronicAcid: [],
+      prp: [],
+    };
+
+    data.forEach((item) => {
+      const treatment = item.treatment?.toLowerCase();
+      if (treatment == "botox") {
+        groupData.botox.push(`data:image/jpeg;base64,${item.base64Image}`);
+      }
+      if (treatment == "skin booster") {
+        groupData.skinBooster.push(
+          `data:image/jpeg;base64,${item.base64Image}`
+        );
+      }
+      if (treatment == "hyaluronic acid") {
+        groupData.hyaluronicAcid.push(
+          `data:image/jpeg;base64,${item.base64Image}`
+        );
+      }
+      if (treatment == "prp") {
+        groupData.prp.push(`data:image/jpeg;base64,${item.base64Image}`);
+      }
+    });
+
+    Object.assign(beforeAfterData, groupData);
+  } catch (error) {
+    console.error("Error loading before-after images:", error);
+  }
+}
 
 let currentBeforeAfterIndex = 0;
 
@@ -469,5 +494,6 @@ async function loadRecommendations() {
 window.addEventListener("load", () => {
   updateItemsToShow();
   updateCarousel();
+  loadBeforeAfterImages(); // Load before-after images on page load
   loadRecommendations(); // Load recommendations on page load
 });
