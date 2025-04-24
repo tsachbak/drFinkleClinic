@@ -171,6 +171,18 @@ footer {
   flex: 1; /* Ensure fields take equal width */
 }
 
+input[type="tel"]::placeholder,
+input[type="email"]::placeholder {
+  text-align: right; /* Align placeholder text to the right */
+  direction: rtl; /* Ensure placeholder text is in RTL direction */
+}
+
+input[type="tel"],
+input[type="email"] {
+  text-align: left; /* Align input text to the right */
+  direction: ltr; /* Ensure input text is in RTL direction */
+}
+
 /* Responsive Styles */
 @media (max-width: 768px) {
   /* Header Adjustments */

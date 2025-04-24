@@ -413,10 +413,16 @@ document.getElementById("submitBtn").addEventListener("click", function () {
   const lastName = document.getElementById("lastName").value;
   const phoneNumber = document.getElementById("phoneNumber").value;
   const treatment = document.getElementById("treatment").value;
+  const email = document.getElementById("email").value;
 
   // Validate form fields
-  if (!firstName || !lastName || !phoneNumber || !treatment) {
+  if (!firstName || !lastName || !phoneNumber || !treatment || !email) {
     alert("אנא מלאו את כל השדות.");
+    return;
+  }
+
+  if (!email.includes("@")) {
+    alert("כתובת אימייל אינה תקינה");
     return;
   }
 
@@ -429,10 +435,13 @@ document.getElementById("submitBtn").addEventListener("click", function () {
     lastName,
     phoneNumber,
     treatment,
+    email,
   };
 
   // Send data to the server
-  fetch("https://drfikiserver.onrender.com/Users/submit", {
+  //const url = "https://localhost:7171/Users/submit";
+  const url = "https://drfikiserver.onrender.com/Users/submit";
+  fetch(url, {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
