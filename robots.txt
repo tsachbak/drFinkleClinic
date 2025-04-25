@@ -2,3 +2,5 @@ User-agent: *
 Allow: /
 
 Sitemap: https://tsachbak.github.io/drFinkleClinic/sitemap.xml
+
+Sitemap: https://tsachbak.github.io/drFinkleClinic/drFili.xml
