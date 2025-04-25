@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://tsachbak.github.io/drFinkleClinic/sitemap.xml.txt
+Sitemap: https://tsachbak.github.io/drFinkleClinic/sitemap_index.xml.
