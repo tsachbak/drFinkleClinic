@@ -426,6 +426,11 @@ document.getElementById("submitBtn").addEventListener("click", function () {
     return;
   }
 
+  if (!isValidIsraeliPhoneNumber(phoneNumber)) {
+    alert("מספר טלפון אינו תקין. אנא הקלידו מספר טלפון ישראלי תקין.");
+    return;
+  }
+
   // Show spinner modal
   spinnerModal.classList.remove("hidden");
 
@@ -463,6 +468,11 @@ document.getElementById("submitBtn").addEventListener("click", function () {
       alert("אירעה שגיאה. נסו שוב מאוחר יותר.");
     });
 });
+
+function isValidIsraeliPhoneNumber(phoneNumber) {
+  const regex = /^(?:\+972|0)([23489]|5[0-9]|7[0-9]|6[0-9])\d{7}$/;
+  return regex.test(phoneNumber);
+}
 
 async function loadRecommendations() {
   const recommendationsList = document.getElementById("recommendationsList");
