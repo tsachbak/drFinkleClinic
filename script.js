@@ -477,6 +477,33 @@ function isValidIsraeliPhoneNumber(phoneNumber) {
 async function loadRecommendations() {
   const recommendationsList = document.getElementById("recommendationsList");
 
+  const staticImages = [
+    "pictures/recommendations/reco_1.jpeg",
+    "pictures/recommendations/reco_2.jpeg",
+    "pictures/recommendations/reco_3.jpeg",
+  ];
+
+  recommendationsList.innerHTML = ""; // Clear existing images
+
+  staticImages.forEach((imageSrc, index) => {
+    const li = document.createElement("li");
+    li.className = "flex-shrink-0 w-1/3 px-2";
+
+    const img = document.createElement("img");
+    img.src = imageSrc;
+    img.alt = `Recommendation ${index + 1}`;
+    img.className =
+      "w-full h-[300px] object-contain rounded-md shadow-md cursor-pointer";
+    img.onclick = () => showImageModal(img.src);
+
+    li.appendChild(img);
+    recommendationsList.appendChild(li);
+  });
+
+  currentIndex = 0; // Reset the index
+  totalItems = recommendationsList.children.length; // Update the total items count
+  updateCarousel(); // Update the carousel position
+
   try {
     //const response = await fetch("https://localhost:7171/recommendations");
     const response = await fetch(
