@@ -4,7 +4,7 @@
 
   <!-- Homepage -->
   <url>
-    <loc>https://tsachbak.github.io/drFinkleClinic/</loc>
+    <loc>https://www.tsachbak.com/</loc>
     <lastmod>2025-04-23</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
@@ -12,7 +12,7 @@
 
   <!-- Actual file page -->
   <url>
-    <loc>https://tsachbak.github.io/drFinkleClinic/index.html</loc>
+    <loc>https://www.tsachbak.com/index.html</loc>
     <lastmod>2025-04-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
