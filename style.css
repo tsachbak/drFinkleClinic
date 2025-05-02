@@ -3,6 +3,14 @@ html {
   scroll-padding-top: 14rem; /* Adjust based on your header height */
 }
 
+.clinic-title {
+  font-family: "Playfair Display", serif;
+  font-size: 3em;
+  font-weight: 700;
+  color: #a9658d;
+  margin-bottom: 0.2em;
+}
+
 body {
   font-family: Arial, Helvetica, sans-serif;
   background-color: #f2f2f2;

@@ -16,7 +16,7 @@
     />
     <!-- Google Fonts -->
     <link
-      href="https://fonts.googleapis.com/css2?family=Aguafina+Script&family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Aguafina+Script&family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Playfair+Display:wght@700&display=swap"
       rel="stylesheet"
     />
 
@@ -49,7 +49,7 @@
     <header
       id="topPage"
       dir="ltr"
-      class="fixed top-0 left-0 w-full h-48 z-50 bg-black shadow-md py-4 px-20 flex items-center justify-between"
+      class="fixed top-0 left-0 w-full h-40 z-50 bg-white shadow-md py-4 px-20 flex items-center justify-between"
     >
       <!-- Logo -->
       <div class="flex justify-start items-center">
@@ -59,11 +59,9 @@
           class="logo-img [150px] w-[150px] rounded-full object-cover bg-white p-2 shadow-lg"
         />
       </div>
-      <!-- Title-->
+      <!-- Title -->
       <div class="text-center flex-1 hidden md:block">
-        <span class="text-6xl font-bold text-pink-400 font-libre italic">
-          <h1>Dr. Finkelstein Clinics</h1>
-        </span>
+        <h1 class="clinic-title">Dr. Finkelstein Clinics</h1>
       </div>
       <!-- Mobile Menu Button and Links -->
       <div class="relative md:hidden flex items-center justify-end h-full">
@@ -140,22 +138,20 @@
     </header>
 
     <!-- 🌟 Hero Section -->
-    <section
-      id="heroSection"
-      class="relative h-[50vh] bg-center bg-cover flex items-center justify-center pt-32"
-      style="margin-top: 7%"
-    >
-      <!-- 🎥 Video background -->
-      <video
-        autoplay
-        muted
-        loop
-        playsinline
-        class="absolute inset-0 w-full h-full object-cover z-0"
-      >
-        <source src="videos/clinicView2.mp4" type="video/mp4" />
-        הדפדפן שלך לא תומך בווידאו.
-      </video>
+    <section id="heroSection" class="relative w-full h-screen overflow-hidden">
+      <!-- Desktop Image -->
+      <img
+        src="pictures/HeroSection/HeroSectionImage.jpeg"
+        alt="קליניקת פינקלשטיין"
+        class="hidden md:block w-full h-full object-cover object-top"
+      />
+
+      <!-- Mobile Image -->
+      <img
+        src="pictures/HeroSection/MobileHeroSectionImageWithTitle.jpeg"
+        alt="קליניקת פינקלשטיין"
+        class="block md:hidden w-full h-full object-contain object-top"
+      />
     </section>
 
     <!-- 🩺 About Section -->
@@ -170,25 +166,18 @@
           מומחיות רפואית, יופי ואסתטיקה:
         </h3>
         <p class="text-white mb-4">
-          אנו גאים להציג את צוות המומחים שלנו, המשלב ידע רפואי מעמיק עם מומחיות
-          בתחום האסתטיקה הרפואית. הצוות שלנו מורכב מרופאים מנוסים ומובילים,
-          המחויבים להעניק לכם את הטיפול הטוב ביותר, תוך שימוש בטכנולוגיות
-          המתקדמות ביותר ובהתאם לסטנדרטים הגבוהים ביותר.
-        </p>
-        <p class="text-white mb-4">
           ד"ר גיל משה פינקלשטיין –את לימודים הרפואה סיים בהצטיינות בהמשך התמחה
-          ברפואת עיניים בבית חולים נהריה וכעת עובד כ מומחה לרפואת עיניים במרפאות
-          בצפון ד"ר גיל משה פינקלשטיין הוא מומחה בעל שם בתחום רפואת העיניים, בעל
-          רישיונות רפואה ישראליים ואירופאיים. ניסיונו העשיר ברפואת עיניים תורם
-          רבות להבנת האנטומיה של הפנים, דבר חיוני בתחום האסתטיקה הרפואית.
+          ברפואת עיניים בבית חולים נהריה וכעת עובד כמומחה לרפואת עיניים במרפאות
+          בצפון. ד"ר גיל משה פינקלשטיין הוא מומחה בעל שם בתחום רפואת העיניים,
+          בעל רישיונות רפואה ישראליים ואירופאיים. ניסיונו העשיר ברפואת עיניים
+          תורם רבות להבנת האנטומיה של הפנים, דבר חיוני בתחום האסתטיקה הרפואית.
         </p>
         <p class="text-white mb-4">
-          ד"ר אביה פינקלשטיין היא רופאת משפחה מומחית, בעלת הכשרה וידע מעמיקים
-          בתחום העור והאסתטיקה הרפואית. את לימודי הרפואה סיימה בהצטיינות ואת
-          התמחותה סיימה בטכניון. כעת עובדת במרפאות בצפון כמומחיות ברפואת משפחה
-          בנוסף עברה לימודים כנאמנת כאב ועוסקת בדיקור רקמות עמוק. מומחיותה
-          מאפשרת לה להבין את ההיבטים הרפואיים הכוללים, ולהתאים את הטיפול האסתטי
-          לכל מטופל באופן אישי.
+          ד"ר אביה פינקלשטיין רופאת משפחה מומחית, בעלת הכשרה וידע מעמיקים בתחום
+          העור והאסתטיקה הרפואית. את לימודי הרפואה סיימה בהצטיינות וכעת עובדת
+          במרפאות בצפון כמומחיות ברפואת משפחה. בנוסף עברה הכשרות בתחום העור
+          בטכניון. מומחיותה מאפשרת לה להבין את ההיבטים הרפואיים הכוללים, ולהתאים
+          את הטיפול האסתטי לכל מטופל באופן איש תוך הבנה וידע מעמיק למצב בריאותו.
         </p>
         <h3 class="text-white text-xl font-semibold mb-2">
           הידע והמומחיות שלנו:
@@ -515,50 +504,55 @@
 
     <!-- Footer -->
     <footer
-      class="bg-black text-center py-4 text-sm fixed bottom-0 w-full flex justify-center items-center space-x-2 rtl:space-x-reverse z-50 opacity-20 hover:opacity-100 transition"
+      class="bg-[#fdf0e7] text-center py-4 text-sm fixed bottom-0 w-full flex justify-center items-center space-x-2 rtl:space-x-reverse z-50 opacity-20 hover:opacity-100 transition"
+      dir="ltr"
     >
-      <!-- Instegram -->
-      <a
-        href="https://www.instagram.com/dr.finkelstein_clinics/"
-        target="_blank"
-        class="text-pink-500 hover:text-pink-700 transition"
-        aria-label="Instagram"
-      >
-        <i class="fab fa-instagram text-2xl"></i>
-      </a>
-      <!-- FaceBook -->
-      <a
-        href="https://www.facebook.com/profile.php?id=61564889647693"
-        target="_blank"
-        class="text-blue-600 hover:text-blue-800 transition"
-        aria-label="Facebook"
-      >
-        <i class="fab fa-facebook text-2xl"></i>
-      </a>
-      <!-- Waze  -->
-      <a
-        href="https://waze.com/ul?q=האלון%2016%20טל-אל&navigate=yes"
-        target="_blank"
-        class="text-white hover:text-gray-300 transition"
-        aria-label="Navigate with Waze"
-      >
-        <i class="fab fa-waze text-2xl"></i>
-      </a>
+      <div class="flex justify-between items-center w-full px-6">
+        <!-- Left: Copyright -->
+        <span class="text-black text-sm font-semibold">
+          &copy; מרפאות דוקטור פינקלשטיין. כל הזכויות שמורות
+        </span>
 
-      <!-- Google Maps -->
-      <a
-        href="https://www.google.com/maps?q=האלון+16+טל-אל"
-        target="_blank"
-        class="text-green-500 hover:text-green-700 transition"
-        aria-label="Navigate with Google Maps"
-      >
-        <i class="fas fa-map-marker-alt text-2xl"></i>
-      </a>
+        <div class="flex space-x-4 items-end justify-end" dir="ltr">
+          <!-- Instegram -->
+          <a
+            href="https://www.instagram.com/dr.finkelstein_clinics/"
+            target="_blank"
+            class="text-pink-500 hover:text-pink-700 transition"
+            aria-label="Instagram"
+          >
+            <i class="fab fa-instagram text-2xl"></i>
+          </a>
+          <!-- FaceBook -->
+          <a
+            href="https://www.facebook.com/profile.php?id=61564889647693"
+            target="_blank"
+            class="text-blue-600 hover:text-blue-800 transition"
+            aria-label="Facebook"
+          >
+            <i class="fab fa-facebook text-2xl"></i>
+          </a>
+          <!-- Waze  -->
+          <a
+            href="https://waze.com/ul?q=האלון%2016%20טל-אל&navigate=yes"
+            target="_blank"
+            class="text-blue-600 hover:text-gray-300 transition"
+            aria-label="Navigate with Waze"
+          >
+            <i class="fab fa-waze text-2xl"></i>
+          </a>
 
-      <!-- Copyrights -->
-      <span class="text-white"
-        >&copy; קליניקת פינקלשטיין. כל הזכויות שמורות.</span
-      >
+          <!-- Google Maps -->
+          <a
+            href="https://www.google.com/maps?q=האלון+16+טל-אל"
+            target="_blank"
+            class="text-green-500 hover:text-green-700 transition"
+            aria-label="Navigate with Google Maps"
+          >
+            <i class="fas fa-map-marker-alt text-2xl"></i>
+          </a>
+        </div>
+      </div>
     </footer>
 
     <!-- Your JS file -->
