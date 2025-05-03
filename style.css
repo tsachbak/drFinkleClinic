@@ -7,7 +7,8 @@ html {
   font-family: "Playfair Display", serif;
   font-size: 3em;
   font-weight: 700;
-  color: #a9658d;
+  /*color: #a9658d;*/
+  color: #ec4899;
   margin-bottom: 0.2em;
 }
 
@@ -33,7 +34,7 @@ nav a {
 }
 
 section {
-  background-color: white;
+  background-color: #fdf3ec;
   margin: 20px 0;
   padding: 20px;
   border-radius: 10px;

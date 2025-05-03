@@ -170,18 +170,12 @@ const serviceDescriptions = {
     image: "pictures/servicies/hyaluronicAcid.jpeg",
   },
   prp: {
-    title: "Prp",
+    title: "PRP",
     description: `
     <h3 class="text-xl font-semibold mb-4">מהו טיפול PRP?</h3>
     <p class="mb-4">
       טיפול PRP (Platelet-Rich Plasma) לשיער הוא הליך רפואי חדשני ומתקדם, המבוסס על שימוש בפלזמה עשירה בטסיות דם המופקת מדמו של המטופל עצמו. טסיות הדם מכילות גורמי גדילה וחלבונים חיוניים, המעודדים צמיחת שיער, מחזקים את זקיקי השיער ומאטים את תהליך נשירת השיער.
     </p>
-    <h3 class="text-xl font-semibold mb-4">כיצד מתבצע הטיפול?</h3>
-    <ul class="list-disc list-inside mb-4">
-      <li>לקיחת דם: נלקחת כמות קטנה של דם מהמטופל, בדומה לבדיקת דם רגילה.</li>
-      <li>הפרדת הפלזמה: הדם עובר תהליך צנטריפוגה, המפריד את הפלזמה העשירה בטסיות דם משאר מרכיבי הדם.</li>
-      <li>הזרקה לקרקפת: הפלזמה העשירה בטסיות דם מוזרקת באמצעות מחטים עדינות לאזורי הקרקפת הדלילים בשיער.</li>
-    </ul>
     <h3 class="text-xl font-semibold mb-4">יתרונות הטיפול:</h3>
     <ul class="list-disc list-inside mb-4">
       <li>טבעי ובטוח: השימוש בפלזמה עצמית מפחית את הסיכון לתגובות אלרגיות או תופעות לוואי.</li>
@@ -212,10 +206,10 @@ function handleServiceClick(serviceKey) {
 
   // Update the content of the selected service section
   serviceSection.innerHTML = `
-    <div class="p-6 max-w-7xl mx-auto bg-gradient-to-r from-pink-500 via-pink-400 to-pink-300 rounded-md shadow my-10">
-      <h2 class="text-3xl font-bold mb-6 text-center text-white">${selectedService.title}</h2>
+    <div class="w-full bg-[#fdf3ec] my-10 px-4 md:px-10">
+      <h2 class="text-3xl font-bold mb-6 text-center text-black">${selectedService.title}</h2>
       <div class="flex flex-col md:flex-row items-start space-y-6 md:space-y-0 md:space-x-6 rtl:space-x-reverse">
-        <div class="text-white text-lg leading-relaxed md:w-2/3">
+        <div class="text-black text-lg leading-relaxed md:w-2/3">
           ${selectedService.description}
         </div>
         <img
@@ -364,7 +358,7 @@ function showBeforeAfterSection(serviceKey) {
     const img = document.createElement("img");
     img.src = imageSrc;
     img.alt = `Before-After ${index + 1}`;
-    img.className = `pl-5 pr-5 pb-5 pt-5 bg-pink-200 slide ${
+    img.className = `pl-5 pr-5 pb-5 pt-5 bg-[#fdf3ec] slide ${
       index === 0 ? "active" : ""
     }`;
 
