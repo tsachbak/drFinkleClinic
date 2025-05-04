@@ -76,7 +76,7 @@
         <!-- Mobile Navigation Links -->
         <div
           id="mobileMenu"
-          class="hidden absolute top-16 right-4 flex flex-col items-end space-y-2 text-pink-700 font-medium bg-white shadow-lg p-4 rounded-md"
+          class="hidden absolute top-16 right-4 flex flex-col items-end space-y-2 text-pink-500 font-medium rounded-md"
         >
           <a
             href="#heroSection"
@@ -148,147 +148,159 @@
 
       <!-- Mobile Image -->
       <img
-        src="pictures/HeroSection/MobileHeroSectionImageWithTitle.jpeg"
+        src="pictures/HeroSection/MobileHeroSectionImage.jpeg"
         alt="קליניקת פינקלשטיין"
         class="block md:hidden w-full h-full object-cover object-top"
       />
+
+      <!-- Mobile Title Overlay -->
+      <h1
+        class="clinic-title absolute top-8 right-0 left-0 text-center text-3xl font-bold text-[#44291F] md:hidden z-10"
+      >
+        Dr. Finkelstein Clinics
+      </h1>
     </section>
 
     <!-- 🩺 About Section -->
-    <section
-      id="about"
-      class="p-6 max-w-7xl mx-auto bg-gradient-to-r bg-[#fdf3ec] rounded-md shadow my-10 flex items-center space-x-6 rtl:space-x-reverse"
-    >
-      <!-- About Text-->
-      <div class="w-full md:w-1/2 text-right about-text opacity-1">
-        <h2 class="text-black text-2xl font-bold mb-4">אודות הקליניקה</h2>
-        <h3 class="text-black text-xl font-semibold mb-2">
-          מומחיות רפואית, יופי ואסתטיקה:
-        </h3>
-        <p class="text-black mb-4">
-          ד"ר גיל משה פינקלשטיין –את לימודים הרפואה סיים בהצטיינות בהמשך התמחה
-          ברפואת עיניים בבית חולים נהריה וכעת עובד כמומחה לרפואת עיניים במרפאות
-          בצפון. ד"ר גיל משה פינקלשטיין הוא מומחה בעל שם בתחום רפואת העיניים,
-          בעל רישיונות רפואה ישראליים ואירופאיים. ניסיונו העשיר ברפואת עיניים
-          תורם רבות להבנת האנטומיה של הפנים, דבר חיוני בתחום האסתטיקה הרפואית.
-        </p>
-        <p class="text-black mb-4">
-          ד"ר אביה פינקלשטיין רופאת משפחה מומחית, בעלת הכשרה וידע מעמיקים בתחום
-          העור והאסתטיקה הרפואית. את לימודי הרפואה סיימה בהצטיינות וכעת עובדת
-          במרפאות בצפון כמומחיות ברפואת משפחה. בנוסף עברה הכשרות בתחום העור
-          בטכניון. מומחיותה מאפשרת לה להבין את ההיבטים הרפואיים הכוללים, ולהתאים
-          את הטיפול האסתטי לכל מטופל באופן איש תוך הבנה וידע מעמיק למצב בריאותו.
-        </p>
-        <h3 class="text-black text-xl font-semibold mb-2">
-          הידע והמומחיות שלנו:
-        </h3>
-        <p class="text-black mb-4">
-          הצוות שלנו מתמחה במגוון רחב של טיפולים אסתטיים, תוך התחשבות במחלות
-          עיניים, אנטומיה של הפנים, מחלות מערכתיות ותרופות. אנו משתתפים באופן
-          קבוע בכנסים מקצועיים בארץ ובעולם, ומשתפים פעולה עם החברות המובילות
-          בתחום האסתטיקה הרפואית, על מנת להבטיח שאנו מעניקים לכם את הטיפולים
-          החדשניים והיעילים ביותר.
-        </p>
-        <p class="text-black mb-4">
-          אנו מחויבים להעניק לכם טיפול אישי, מקצועי ובטוח, תוך שימוש בטכנולוגיות
-          המתקדמות ביותר ובהתאם לסטנדרטים הגבוהים ביותר. אנו מאמינים שיופי אמיתי
-          מתחיל מבפנים, ולכן אנו שמים דגש על הבנת הצרכים האישיים של כל מטופל,
-          ועל התאמת הטיפול האסתטי לצרכיו. מוזמנים ליצור קשר
-        </p>
-      </div>
-      <!-- Slideshow Container -->
-      <div class="w-full md:w-1/2 relative flex justify-center">
-        <!-- Slideshow Images -->
-        <div
-          id="slideshow"
-          class="relative overflow-hidden rounded-md shadow-md h-[700px] mx-auto max-w-[90%] sm:max-w-[500px] w-full"
-        >
-          <img
-            src="pictures/clinic/clinic_4.jpeg"
-            alt="תמונה 1"
-            class="about_slide left-1/2 top-1/2 translate-x-[-50%] translate-y-[-50%] absolute w-full h-full object-cover opacity-100 transition-opacity duration-700"
-          />
-          <img
-            src="pictures/clinic/clinic_5.jpeg"
-            alt="תמונה 2"
-            class="about_slide left-1/2 top-1/2 translate-x-[-50%] translate-y-[-50%] absolute w-full h-full object-cover opacity-100 transition-opacity duration-700"
-          />
-          <img
-            src="pictures/clinic/clinic_6.jpeg"
-            alt="תמונה 3"
-            class="about_slide left-1/2 top-1/2 translate-x-[-50%] translate-y-[-50%] absolute w-full h-full object-cover opacity-100 transition-opacity duration-700"
-          />
-          <img
-            src="pictures/clinic/clinic_7.jpeg"
-            alt="תמונה 4"
-            class="about_slide left-1/2 top-1/2 translate-x-[-50%] translate-y-[-50%] absolute w-full h-full object-cover opacity-100 transition-opacity duration-700"
-          />
+    <section id="about" class="w-full bg-[#fdf3ec] my-10">
+      <div
+        class="mx-auto rounded-md shadow p-6 flex flex-col md:flex-row items-center rtl:space-x-reverse space-x-0 md:space-x-6"
+      >
+        <!-- About Text-->
+        <div class="w-full md:w-1/2 text-right about-text opacity-1">
+          <h2 class="text-black text-2xl font-bold mb-4">אודות הקליניקה</h2>
+          <h3 class="text-black text-xl font-semibold mb-2">
+            מומחיות רפואית, יופי ואסתטיקה:
+          </h3>
+          <p class="text-black mb-4">
+            ד"ר גיל משה פינקלשטיין –את לימודים הרפואה סיים בהצטיינות בהמשך התמחה
+            ברפואת עיניים בבית חולים נהריה וכעת עובד כמומחה לרפואת עיניים
+            במרפאות בצפון. ד"ר גיל משה פינקלשטיין הוא מומחה בעל שם בתחום רפואת
+            העיניים, בעל רישיונות רפואה ישראליים ואירופאיים. ניסיונו העשיר
+            ברפואת עיניים תורם רבות להבנת האנטומיה של הפנים, דבר חיוני בתחום
+            האסתטיקה הרפואית.
+          </p>
+          <p class="text-black mb-4">
+            ד"ר אביה פינקלשטיין רופאת משפחה מומחית, בעלת הכשרה וידע מעמיקים
+            בתחום העור והאסתטיקה הרפואית. את לימודי הרפואה סיימה בהצטיינות וכעת
+            עובדת במרפאות בצפון כמומחיות ברפואת משפחה. בנוסף עברה הכשרות בתחום
+            העור בטכניון. מומחיותה מאפשרת לה להבין את ההיבטים הרפואיים הכוללים,
+            ולהתאים את הטיפול האסתטי לכל מטופל באופן איש תוך הבנה וידע מעמיק
+            למצב בריאותו.
+          </p>
+          <h3 class="text-black text-xl font-semibold mb-2">
+            הידע והמומחיות שלנו:
+          </h3>
+          <p class="text-black mb-4">
+            הצוות שלנו מתמחה במגוון רחב של טיפולים אסתטיים, תוך התחשבות במחלות
+            עיניים, אנטומיה של הפנים, מחלות מערכתיות ותרופות. אנו משתתפים באופן
+            קבוע בכנסים מקצועיים בארץ ובעולם, ומשתפים פעולה עם החברות המובילות
+            בתחום האסתטיקה הרפואית, על מנת להבטיח שאנו מעניקים לכם את הטיפולים
+            החדשניים והיעילים ביותר.
+          </p>
+          <p class="text-black mb-4">
+            אנו מחויבים להעניק לכם טיפול אישי, מקצועי ובטוח, תוך שימוש
+            בטכנולוגיות המתקדמות ביותר ובהתאם לסטנדרטים הגבוהים ביותר. אנו
+            מאמינים שיופי אמיתי מתחיל מבפנים, ולכן אנו שמים דגש על הבנת הצרכים
+            האישיים של כל מטופל, ועל התאמת הטיפול האסתטי לצרכיו. מוזמנים ליצור
+            קשר
+          </p>
         </div>
+        <!-- Slideshow Container -->
+        <div class="w-full md:w-1/2 relative flex justify-center">
+          <!-- Slideshow Images -->
+          <div
+            id="slideshow"
+            class="relative overflow-hidden rounded-md shadow-md h-[700px] mx-auto max-w-[90%] sm:max-w-[500px] w-full"
+          >
+            <img
+              src="pictures/clinic/clinic_4.jpeg"
+              alt="תמונה 1"
+              class="about_slide left-1/2 top-1/2 translate-x-[-50%] translate-y-[-50%] absolute w-full h-full object-cover opacity-100 transition-opacity duration-700"
+            />
+            <img
+              src="pictures/clinic/clinic_5.jpeg"
+              alt="תמונה 2"
+              class="about_slide left-1/2 top-1/2 translate-x-[-50%] translate-y-[-50%] absolute w-full h-full object-cover opacity-100 transition-opacity duration-700"
+            />
+            <img
+              src="pictures/clinic/clinic_6.jpeg"
+              alt="תמונה 3"
+              class="about_slide left-1/2 top-1/2 translate-x-[-50%] translate-y-[-50%] absolute w-full h-full object-cover opacity-100 transition-opacity duration-700"
+            />
+            <img
+              src="pictures/clinic/clinic_7.jpeg"
+              alt="תמונה 4"
+              class="about_slide left-1/2 top-1/2 translate-x-[-50%] translate-y-[-50%] absolute w-full h-full object-cover opacity-100 transition-opacity duration-700"
+            />
+          </div>
 
-        <!-- Navigation Buttons -->
-        <button
-          id="prevBtn"
-          class="absolute top-1/2 left-2 transform -translate-y-1/2 bg-black bg-opacity-50 text-white rounded-full p-2 hover:bg-opacity-75"
-        >
-          &#10095;
-        </button>
-        <button
-          id="nextBtn"
-          class="absolute top-1/2 right-2 transform -translate-y-1/2 bg-black bg-opacity-50 text-white rounded-full p-2 hover:bg-opacity-75"
-        >
-          &#10094;
-        </button>
+          <!-- Navigation Buttons -->
+          <button
+            id="prevBtn"
+            class="absolute top-1/2 left-2 transform -translate-y-1/2 bg-black bg-opacity-50 text-white rounded-full p-2 hover:bg-opacity-75"
+          >
+            &#10095;
+          </button>
+          <button
+            id="nextBtn"
+            class="absolute top-1/2 right-2 transform -translate-y-1/2 bg-black bg-opacity-50 text-white rounded-full p-2 hover:bg-opacity-75"
+          >
+            &#10094;
+          </button>
+        </div>
       </div>
     </section>
 
     <!-- 💉 Services Section -->
-    <section
-      id="services"
-      class="p-8 max-w-7xl mx-auto bg-[#fdf3ec] rounded-md shadow mb-10"
-    >
-      <h2 class="text-2xl font-bold mb-6 text-center">השירותים שלנו</h2>
-      <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
-        <!-- Service 1 - Botox -->
-        <div class="service-item text-center">
-          <h3 class="text-lg font-semibold mb-2">בוטוקס</h3>
-          <img
-            src="pictures/servicies/botox.jpeg"
-            alt="botox"
-            class="w-full h-[300px] object-cover rounded-md shadow-md cursor-pointer hover:opacity-80 transition"
-            onclick="handleServiceClick('botox')"
-          />
-        </div>
+    <section id="services" class="w-full bg-[#fdf3ec] my-10">
+      <div class="p-6 max-w-7xl mx-auto bg-[#fef8f3] rounded-md shadow mb-10">
+        <h2 class="text-2xl font-bold mb-6 text-center">השירותים שלנו</h2>
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-6 iteems-stretch">
+          <!-- Service 1 - Botox -->
+          <div class="service-item text-center flex flex-col h-full">
+            <h3 class="text-lg font-semibold mb-2 h-[48px]">בוטוקס</h3>
+            <img
+              src="pictures/servicies/botox.jpeg"
+              alt="botox"
+              class="w-full h-[300px] object-cover rounded-md shadow-md cursor-pointer hover:opacity-80 transition"
+              onclick="handleServiceClick('botox')"
+            />
+          </div>
 
-        <!-- Service 2 - Skin Booster -->
-        <div class="service-item text-center">
-          <h3 class="text-lg font-semibold mb-2">סקין בוסטר</h3>
-          <img
-            src="pictures/servicies/skinBooster.jpeg"
-            alt="skinBooster"
-            class="w-full h-[300px] object-cover rounded-md shadow-md cursor-pointer hover:opacity-80 transition"
-            onclick="handleServiceClick('skinBooster')"
-          />
-        </div>
+          <!-- Service 2 - Skin Booster -->
+          <div class="service-item text-center flex flex-col h-full">
+            <h3 class="text-lg font-semibold mb-2 h-[48px]">סקין בוסטר</h3>
+            <img
+              src="pictures/servicies/skinBooster.jpeg"
+              alt="skinBooster"
+              class="w-full h-[300px] object-cover rounded-md shadow-md cursor-pointer hover:opacity-80 transition"
+              onclick="handleServiceClick('skinBooster')"
+            />
+          </div>
 
-        <!-- Service 3 HyaluronicAcid -->
-        <div class="service-item text-center">
-          <h3 class="text-lg font-semibold mb-2">חומצה היאלורונית</h3>
-          <img
-            src="pictures/servicies/hyaluronicAcid.jpeg"
-            alt="hyaluronicAcid"
-            class="w-full h-[300px] object-cover rounded-md shadow-md cursor-pointer hover:opacity-80 transition"
-            onclick="handleServiceClick('hyaluronicAcid')"
-          />
-        </div>
-        <!-- Service 4 Prp -->
-        <div class="service-item text-center">
-          <h3 class="text-lg font-semibold mb-2">PRP</h3>
-          <img
-            src="pictures/servicies/prp.jpeg"
-            alt="prp"
-            class="w-full h-[300px] object-cover rounded-md shadow-md cursor-pointer hover:opacity-80 transition"
-            onclick="handleServiceClick('prp')"
-          />
+          <!-- Service 3 HyaluronicAcid -->
+          <div class="service-item text-center flex flex-col h-full">
+            <h3 class="text-lg font-semibold mb-2 h-[48px]">
+              חומצה היאלורונית
+            </h3>
+            <img
+              src="pictures/servicies/hyaluronicAcid.jpeg"
+              alt="hyaluronicAcid"
+              class="w-full h-[300px] object-cover rounded-md shadow-md cursor-pointer hover:opacity-80 transition"
+              onclick="handleServiceClick('hyaluronicAcid')"
+            />
+          </div>
+          <!-- Service 4 Prp -->
+          <div class="service-item text-center flex flex-col h-full">
+            <h3 class="text-lg font-semibold mb-2 h-[48px]">PRP</h3>
+            <img
+              src="pictures/servicies/prp.jpeg"
+              alt="prp"
+              class="w-full h-[300px] object-cover rounded-md shadow-md cursor-pointer hover:opacity-80 transition"
+              onclick="handleServiceClick('prp')"
+            />
+          </div>
         </div>
       </div>
     </section>
@@ -296,7 +308,7 @@
     <!-- Placeholder for the Selected Service Description -->
     <section
       id="selected-service"
-      class="p-8 max-w-7xl mx-auto bg-[#fdf3ec]-100 rounded-md shadow mb-10 hidden"
+      class="p-8 w-full mx-auto bg-[#fdf3ec]-100 rounded-md shadow mb-10 hidden"
     >
       <!-- Content will be dynamically inserted here -->
     </section>
@@ -304,25 +316,25 @@
     <!-- Before-After Section -->
     <section
       id="before-after"
-      class="p-8 max-w-7xl mx-auto bg-[#fdf3ec] rounded-md shadow mb-10 hidden justify-center"
+      class="p-8 mx-auto bg-[#fdf3ec] rounded-md shadow mb-10 hidden justify-center"
     >
       <h2 class="text-2xl font-bold mb-6 text-center">לפני ואחרי</h2>
       <div class="relative overflow-hidden rounded-md shadow-md">
         <!-- Slideshow Container -->
-        <div id="beforeAfterSlideshow" class="mx-auto relative h-[400px]">
+        <div id="beforeAfterSlideshow" class="mx-auto">
           <!-- Images will be dynamically inserted here -->
         </div>
 
         <!-- Navigation Buttons -->
         <button
           id="beforeAfterPrevBtn"
-          class="absolute top-1/2 left-2 transform -translate-y-1/2 bg-black bg-opacity-50 text-white rounded-full p-2 hover:bg-opacity-75"
+          class="absolute left-4 top-1/2 transform -translate-y-1/2 bg-pink-500 text-white p-2 rounded-full shadow-md z-10"
         >
           &#10095;
         </button>
         <button
           id="beforeAfterNextBtn"
-          class="absolute top-1/2 right-2 transform -translate-y-1/2 bg-black bg-opacity-50 text-white rounded-full p-2 hover:bg-opacity-75"
+          class="absolute right-4 top-1/2 transform -translate-y-1/2 bg-pink-500 text-white p-2 rounded-full shadow-md z-10"
         >
           &#10094;
         </button>
@@ -330,32 +342,31 @@
     </section>
 
     <!-- 📝 Recommendations Section -->
-    <section
-      id="recommendations"
-      class="p-8 max-w-7xl mx-auto bg-[#fdf3ec] rounded-md shadow mb-10"
-    >
-      <h2 class="text-2xl font-bold mb-6 text-center">המלצות</h2>
-      <div class="relative overflow-hidden">
-        <!-- Left Arrow -->
-        <button
-          id="prevArrow"
-          class="absolute left-0 top-1/2 transform -translate-y-1/2 bg-pink-500 text-white p-2 rounded-full shadow-md z-10"
-        >
-          &#10095;
-        </button>
+    <section id="recommendations" class="w-full bg-[#fdf3ec] my-10">
+      <div class="p-8 mx-auto bg-[#fef8f3] rounded-md shadow mb-10">
+        <h2 class="text-2xl font-bold mb-6 text-center">המלצות</h2>
+        <div class="relative overflow-hidden">
+          <!-- Left Arrow -->
+          <button
+            id="prevArrow"
+            class="absolute left-0 top-1/2 transform -translate-y-1/2 bg-pink-500 text-white p-2 rounded-full shadow-md z-10"
+          >
+            &#10095;
+          </button>
 
-        <!-- Recommendations List -->
-        <ul
-          id="recommendationsList"
-          class="flex transition-transform duration-500 ease-in-out"
-        ></ul>
-        <!-- Right Arrow -->
-        <button
-          id="nextArrow"
-          class="absolute right-0 top-1/2 transform -translate-y-1/2 bg-pink-500 text-white p-2 rounded-full shadow-md z-10"
-        >
-          &#10094;
-        </button>
+          <!-- Recommendations List -->
+          <ul
+            id="recommendationsList"
+            class="flex transition-transform duration-500 ease-in-out"
+          ></ul>
+          <!-- Right Arrow -->
+          <button
+            id="nextArrow"
+            class="absolute right-0 top-1/2 transform -translate-y-1/2 bg-pink-500 text-white p-2 rounded-full shadow-md z-10"
+          >
+            &#10094;
+          </button>
+        </div>
       </div>
     </section>
 

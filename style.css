@@ -215,19 +215,27 @@ input[type="email"] {
     right: 10px; /* Adjust position */
   }
 
+  .clinic-title {
+    font-size: 1.8em; /* Smaller title size for mobile */
+    color: #ec4899;
+    text-shadow: 1px 2px 2px rgba(0, 0, 0, 0.2);
+    padding: 0 1rem;
+  }
+
   #mobileMenu {
     top: 50px; /* Adjust dropdown position to match the header height */
     right: 0px;
     width: 100px; /* Full width for mobile menu */
     max-height: calc(100vh - 80px); /* Ensure it doesn't overflow the screen */
     overflow-y: auto; /* Add scrolling if the content is too long */
-    background-color: black; /* Ensure the background is visible */
-    opacity: 0.8;
+    background-color: #fdf3ec; /* Ensure the background is visible */
+    opacity: 0.9;
     z-index: 1000; /* Ensure it appears above other elements */
   }
 
   #mobileMenu a {
     font-size: 1rem; /* Smaller font size for links */
+    font-weight: bold;
     padding: 10px 15px; /* Adjust padding for better spacing */
     display: block; /* Ensure links take up full width */
     text-align: right; /* Align text to the right */

@@ -206,19 +206,21 @@ function handleServiceClick(serviceKey) {
 
   // Update the content of the selected service section
   serviceSection.innerHTML = `
-    <div class="w-full bg-[#fdf3ec] my-10 px-4 md:px-10">
-      <h2 class="text-3xl font-bold mb-6 text-center text-black">${selectedService.title}</h2>
-      <div class="flex flex-col md:flex-row items-start space-y-6 md:space-y-0 md:space-x-6 rtl:space-x-reverse">
-        <div class="text-black text-lg leading-relaxed md:w-2/3">
-          ${selectedService.description}
+    <div class="w-full">
+      <div class="max-w-7xl mx-auto bg-[#fef8f3] my-10 px-4 md:px-10 py-6 rounded-md shadow">
+        <h2 class="text-3xl font-bold mb-6 text-center text-black">${selectedService.title}</h2>
+        <div class="flex flex-col md:flex-row items-start space-y-6 md:space-y-0 md:space-x-6 rtl:space-x-reverse">
+          <div class="text-black text-lg leading-relaxed md:w-2/3">
+            ${selectedService.description}
+          </div>
+          <img
+            src="${selectedService.image}"
+            alt="${selectedService.title}"
+            class="w-full md:w-1/3 h-[500px] object-cover rounded-md shadow-md"
+          />
         </div>
-        <img
-          src="${selectedService.image}"
-          alt="${selectedService.title}"
-          class="w-full md:w-1/3 h-[500px] object-cover rounded-md shadow-md"
-        />
       </div>
-    </div>
+      </div>
   `;
 
   // Show the section
@@ -358,7 +360,7 @@ function showBeforeAfterSection(serviceKey) {
     const img = document.createElement("img");
     img.src = imageSrc;
     img.alt = `Before-After ${index + 1}`;
-    img.className = `pl-5 pr-5 pb-5 pt-5 bg-[#fdf3ec] slide ${
+    img.className = `pl-5 pr-5 pb-5 pt-5 bg-[#fef8f3] slide ${
       index === 0 ? "active" : ""
     }`;
 
