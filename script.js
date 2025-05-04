@@ -210,7 +210,7 @@ function handleServiceClick(serviceKey) {
       <div class="max-w-7xl mx-auto bg-[#fef8f3] my-10 px-4 md:px-10 py-6 rounded-md shadow">
         <h2 class="text-3xl font-bold mb-6 text-center text-black">${selectedService.title}</h2>
         <div class="flex flex-col md:flex-row items-start space-y-6 md:space-y-0 md:space-x-6 rtl:space-x-reverse">
-          <div class="text-black text-lg leading-relaxed md:w-2/3">
+          <div class="text-black text-base leading-relaxed md:w-2/3">
             ${selectedService.description}
           </div>
           <img
