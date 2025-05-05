@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://tsachbak.github.io/drFinkleClinic/sitemap.xml.
+Sitemap: https://www.drfinkelstein.co.il/sitemap.xml
