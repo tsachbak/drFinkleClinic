@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://www.drfinkelstein.co.il/sitemap.xml
+Sitemap: https://drfinkelstein.co.il/sitemap.xml
