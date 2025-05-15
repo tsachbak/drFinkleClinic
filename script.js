@@ -539,3 +539,11 @@ window.addEventListener("load", () => {
   loadBeforeAfterImages(); // Load before-after images on page load
   loadRecommendations(); // Load recommendations on page load
 });
+
+// Handle direct navigation via URL hash (e.g., #skinBooster)
+window.addEventListener("load", () => {
+  const hash = window.location.hash.substring(1); // removes the #
+  if (hash && serviceDescriptions[hash]) {
+    handleServiceClick(hash);
+  }
+});
